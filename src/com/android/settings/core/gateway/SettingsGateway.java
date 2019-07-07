@@ -226,6 +226,8 @@ import com.android.settings.wifi.tether.WifiTetherSettings;
 
 import com.matrixx.settings.MatrixxSettingsLayout;
 
+import com.matrixx.settings.fragments.misc.SmartPixels;
+
 public class SettingsGateway {
 
     /**
@@ -439,6 +441,7 @@ public class SettingsGateway {
             SafetyCenterFragment.class.getName(),
             MatrixxSettingsLayout.class.getName(),
             RunningServices.class.getName(),
+            SmartPixels.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -489,5 +492,6 @@ public class SettingsGateway {
             Settings.ShadeSettingsActivity.class.getName(),
             Settings.MatrixxSettingsLayoutActivity.class.getName(),
             Settings.DevRunningServicesActivity.class.getName(),
+            Settings.SmartPixelsActivity.class.getName(),
     };
 }
