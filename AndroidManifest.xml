@@ -141,6 +141,8 @@
     <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
 
+    <protected-broadcast android:name="com.android.systemui.doze.pulse" />
+
     <application
             android:name=".SettingsApplication"
             android:label="@string/settings_label"
@@ -5133,5 +5135,16 @@
             <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
                 android:value="com.crdroid.settings.fragments.ui.SmartPixels" />
         </activity>
+        <receiver android:name="com.crdroid.settings.fragments.ui.doze.DozeReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.crdroid.settings.fragments.ui.doze.DozeService"
+                android:exported="true"
+                android:permission="crDroidDozeService">
+        </service>
     </application>
 </manifest>
