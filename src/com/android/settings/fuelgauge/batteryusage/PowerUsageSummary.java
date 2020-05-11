@@ -71,11 +71,7 @@ public class PowerUsageSummary extends PowerUsageBase
     @VisibleForTesting static final String KEY_BATTERY_TEMP = "battery_temperature";
     @VisibleForTesting static final String KEY_CURRENT_BATTERY_CAPACITY = "current_battery_capacity";
     @VisibleForTesting static final String KEY_DESIGNED_BATTERY_CAPACITY = "designed_battery_capacity";
-
-    private static final String FILENAME_BATTERY_DESIGN_CAPACITY =
-            "/sys/class/power_supply/bms/charge_full_design";
-    private static final String FILENAME_BATTERY_CURRENT_CAPACITY =
-            "/sys/class/power_supply/bms/charge_full";
+    private static final String KEY_BATTERY_CHARGE_CYCLES = "battery_charge_cycles";
 
     @VisibleForTesting PowerGaugePreference mBatteryTempPref;
     @VisibleForTesting PowerUsageFeatureProvider mPowerFeatureProvider;
@@ -83,6 +79,7 @@ public class PowerUsageSummary extends PowerUsageBase
     @VisibleForTesting BatteryInfo mBatteryInfo;
     @VisibleForTesting PowerGaugePreference mCurrentBatteryCapacity;
     @VisibleForTesting PowerGaugePreference mDesignedBatteryCapacity;
+    @VisibleForTesting PowerGaugePreference mBatteryChargeCycles;
 
     @VisibleForTesting BatteryHeaderPreferenceController mBatteryHeaderPreferenceController;
     @VisibleForTesting BatteryTipPreferenceController mBatteryTipPreferenceController;
@@ -168,6 +165,8 @@ public class PowerUsageSummary extends PowerUsageBase
                 KEY_CURRENT_BATTERY_CAPACITY);
         mDesignedBatteryCapacity = (PowerGaugePreference) findPreference(
                 KEY_DESIGNED_BATTERY_CAPACITY);
+        mBatteryChargeCycles = (PowerGaugePreference) findPreference(
+                KEY_BATTERY_CHARGE_CYCLES);
         mBatteryUtils = BatteryUtils.getInstance(getContext());
 
         if (Utils.isBatteryPresent(getContext())) {
@@ -235,8 +234,9 @@ public class PowerUsageSummary extends PowerUsageBase
         // reload BatteryInfo and updateUI
         restartBatteryInfoLoader();
 
-        mCurrentBatteryCapacity.setSubtitle(parseBatterymAhText(FILENAME_BATTERY_CURRENT_CAPACITY));
-        mDesignedBatteryCapacity.setSubtitle(parseBatterymAhText(FILENAME_BATTERY_DESIGN_CAPACITY));
+        mCurrentBatteryCapacity.setSubtitle(parseBatterymAhText(getResources().getString(R.string.config_batteryCalculatedCapacity)));
+        mDesignedBatteryCapacity.setSubtitle(parseBatterymAhText(getResources().getString(R.string.config_batteryDesignCapacity)));
+        mBatteryChargeCycles.setSubtitle(parseBatteryCycle(getResources().getString(R.string.config_batteryChargeCycles)));
     }
 
     @VisibleForTesting
@@ -304,6 +304,19 @@ public class PowerUsageSummary extends PowerUsageBase
                     + file, ioe);
         } catch (NumberFormatException nfe) {
             Log.e(TAG, "Read a badly formatted battery capacity from "
+                    + file, nfe);
+        }
+        return getResources().getString(com.android.settingslib.R.string.status_unavailable);
+    }
+
+    private String parseBatteryCycle(String file) {
+        try {
+            return Integer.parseInt(readLine(file)) + " Cycles";
+        } catch (IOException ioe) {
+            Log.e(TAG, "Cannot read battery cycle from "
+                    + file, ioe);
+        } catch (NumberFormatException nfe) {
+            Log.e(TAG, "Read a badly formatted battery cycle from "
                     + file, nfe);
         }
         return getResources().getString(com.android.settingslib.R.string.status_unavailable);
