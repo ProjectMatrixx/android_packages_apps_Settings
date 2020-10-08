@@ -32,7 +32,7 @@ import androidx.preference.PreferenceScreen;
 import com.android.settings.R;
 import com.android.settings.bluetooth.BluetoothLengthDeviceNameFilter;
 import com.android.settings.core.BasePreferenceController;
-import com.android.settings.deviceinfo.aboutphone.AboutDevice;
+import com.android.settings.deviceinfo.aboutphone.DeviceCardView;
 import com.android.settings.wifi.tether.WifiDeviceNameTextValidator;
 import com.android.settingslib.core.lifecycle.LifecycleObserver;
 import com.android.settingslib.core.lifecycle.events.OnCreate;
@@ -54,7 +54,7 @@ public class DeviceNamePreferenceController extends BasePreferenceController
     private final BluetoothAdapter mBluetoothAdapter;
     private final WifiDeviceNameTextValidator mWifiDeviceNameTextValidator;
     private LayoutPreference mPreference;
-    private AboutDevice mDeviceCard;
+    private DeviceCardView mDeviceCard;
     private DeviceNamePreferenceHost mHost;
     private String mPendingDeviceName;
 
@@ -72,7 +72,7 @@ public class DeviceNamePreferenceController extends BasePreferenceController
     public void displayPreference(PreferenceScreen screen) {
         super.displayPreference(screen);
         mPreference = screen.findPreference(getPreferenceKey());
-        mDeviceCard = mPreference.findViewById(R.id.about_device_header);
+        mDeviceCard = mPreference.findViewById(R.id.deviceNameCard);
         final CharSequence deviceName = getSummary();
         mDeviceCard.setDeviceName(deviceName.toString(), mWifiDeviceNameTextValidator.isTextValid(deviceName.toString()));
         mDeviceCard.setListener(s -> {
