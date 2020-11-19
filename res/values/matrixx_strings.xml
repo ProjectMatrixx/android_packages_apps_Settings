@@ -326,4 +326,7 @@
     <!-- Enforce DNS for VPN -->
     <string name="vpn_enforce_dns_title">Disable for VPN</string>
     <string name="vpn_enforce_dns_summary">Disable the private DNS when connected to a VPN\nWill restore upon disconnecting</string>
+
+    <!-- Radio Info -->
+    <string name="radio_info_title">Radio info</string>
 </resources>
