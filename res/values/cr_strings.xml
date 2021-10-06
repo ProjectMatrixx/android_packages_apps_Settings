@@ -27,4 +27,7 @@
 
     <!-- Screen resolution -->
     <string name="custom_screen_resolution_title">Custom screen resolution</string>
+
+    <!-- Matrixx maintainer -->
+    <string name="matrixx_maintainer_title">Device maintainer</string>
 </resources>
