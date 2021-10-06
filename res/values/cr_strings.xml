@@ -110,4 +110,6 @@
     <string name="build_is_community_summary">Unofficial build by %s</string>
     <string name="build_is_community_summary_oopsie">Psst! please tell the builder that he/she forgot to add build flags!</string>
 
+    <!-- Matrixx maintainer -->
+    <string name="matrixx_maintainer_title">Device maintainer</string>
 </resources>
