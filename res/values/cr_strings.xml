@@ -33,6 +33,9 @@
     <!-- Screen resolution -->
     <string name="custom_screen_resolution_title">Custom screen resolution</string>
 
+    <!-- Refresh rate -->
+    <string name="low_power_refresh_rate_title_custom">Low power refresh rate</string>
+
     <!-- Matrixx maintainer -->
     <string name="matrixx_maintainer_title">Device maintainer</string>
 
