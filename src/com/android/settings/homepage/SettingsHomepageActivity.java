@@ -90,8 +90,6 @@ import com.google.android.setupcompat.util.WizardManagerHelper;
 import java.net.URISyntaxException;
 import java.util.Set;
 
-import com.android.settingslib.drawable.CircleFramedDrawable;
-
 /** Settings homepage activity */
 public class SettingsHomepageActivity extends FragmentActivity implements
         CategoryMixin.CategoryHandler {
@@ -273,6 +271,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
                         .getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
             }
         }
+        
         mMainFragment = showFragment(() -> {
             final TopLevelSettings fragment = new TopLevelSettings();
             fragment.getArguments().putString(SettingsActivity.EXTRA_FRAGMENT_ARG_KEY,

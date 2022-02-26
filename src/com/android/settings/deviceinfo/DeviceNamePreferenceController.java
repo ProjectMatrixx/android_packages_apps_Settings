@@ -124,6 +124,7 @@ public class DeviceNamePreferenceController extends BasePreferenceController
         mHost = host;
     }
 
+
     /**
      * This method presumes that security/validity checks have already been passed.
      */
