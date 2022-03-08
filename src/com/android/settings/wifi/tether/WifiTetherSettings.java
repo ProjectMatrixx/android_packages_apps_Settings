@@ -357,8 +357,7 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
         }
         mClientPrefController.updateConfig(configBuilder);
         configBuilder.setHiddenSsid(mHiddenSsidPrefController.isHiddenSsidEnabled());
-        configBuilder.setAutoShutdownEnabled(
-                mWifiTetherAutoOffPreferenceController.isEnabled());
+        mWifiTetherAutoOffPreferenceController.updateConfig(configBuilder);
         return configBuilder.build();
     }
 
@@ -370,6 +369,7 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
         use(WifiTetherPasswordPreferenceController.class).updateDisplay();
         use(WifiTetherMaximizeCompatibilityPreferenceController.class).updateDisplay();
         use(WifiTetherHiddenSsidPreferenceController.class).updateDisplay();
+        use(WifiTetherAutoOffPreferenceController.class).updateDisplay();
     }
 
     @Override
