@@ -110,6 +110,7 @@ import com.android.settings.fuelgauge.AdvancedPowerUsageDetail;
 import com.android.settings.fuelgauge.batterysaver.BatterySaverScheduleSettings;
 import com.android.settings.fuelgauge.batterysaver.BatterySaverSettings;
 import com.android.settings.fuelgauge.batteryusage.PowerUsageSummary;
+import com.android.settings.fuelgauge.sleepmode.SleepMode;
 import com.android.settings.gestures.AssistGestureSettings;
 import com.android.settings.gestures.ButtonNavigationSettingsFragment;
 import com.android.settings.gestures.DoubleTapPowerSettings;
@@ -388,6 +389,7 @@ public class SettingsGateway {
             UserAspectRatioDetails.class.getName(),
             crDroidSettingsLayout.class.getName(),
             RunningServices.class.getName(),
+            SleepMode.class.getName(),
             SmartPixels.class.getName(),
             SecurityHubDashboard.class.getName(),
             WifiTetherClientManager.class.getName()
@@ -439,6 +441,7 @@ public class SettingsGateway {
             Settings.NavigationModeSettingsActivity.class.getName(),
             Settings.crDroidSettingsLayoutActivity.class.getName(),
             Settings.DevRunningServicesActivity.class.getName(),
+            Settings.SleepModeActivity.class.getName(),
             Settings.SmartPixelsActivity.class.getName(),
             Settings.FirmwareVersionActivity.class.getName(),
             Settings.WallpaperSettingsActivity.class.getName(),
