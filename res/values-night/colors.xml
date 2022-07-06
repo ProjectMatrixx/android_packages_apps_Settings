@@ -63,5 +63,10 @@
 
     <!-- Icon tint color for battery usage system icon -->
     <color name="battery_usage_system_icon_color">@android:color/white</color>
-</resources>
 
+    <!-- Redesigned Settings UI colors -->
+    <color name="homepage_card">@android:color/system_accent2_700</color>
+    <color name="homepage_icon">@android:color/system_accent2_200</color>
+    <color name="rdnt_crd_bg">#00000000</color>
+    <color name="user_crd_bg">@android:color/system_neutral1_800</color>
+</resources>

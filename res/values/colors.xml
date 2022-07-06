@@ -87,6 +87,10 @@
     <color name="homepage_privacy_background">#5E97F6</color>
     <color name="homepage_wallpaper_background">#E51AD1</color>
     <color name="homepage_notification_background">#DD4C9D</color>
+    
+    <!-- Redesigned Setting UI Color-->
+    <color name="homepage_card">@android:color/system_accent2_100</color>
+    <color name="homepage_icon">@android:color/system_accent1_600</color>
 
     <color name="contextual_card_dismissal_background">@*android:color/background_device_default_light</color>
     <color name="contextual_card_background">@*android:color/background_device_default_light</color>
@@ -221,4 +225,7 @@
 
     <!-- Icon tint color for battery usage system icon -->
     <color name="battery_usage_system_icon_color">?android:attr/textColorPrimary</color>
+
+    <color name="rdnt_crd_bg">#00000000</color>
+    <color name="user_crd_bg">@android:color/system_neutral1_0</color>
 </resources>
