@@ -47,7 +47,7 @@
     <!-- Lineage version -->
     <Preference
         android:key="lineage_version"
-        android:title="@*lineageos.platform:string/lineage_version"
+        android:title="@string/rice_version_title"
         android:summary="@string/summary_placeholder"
         settings:enableCopying="true"
         settings:controller="com.android.settings.deviceinfo.firmwareversion.LineageVersionDetailPreferenceController"/>
@@ -97,7 +97,7 @@
     <!-- Build date -->
     <Preference
         android:key="os_build_date"
-        android:title="@*lineageos.platform:string/build_date"
+        android:title="@string/rice_build_date_title"
         android:summary="@string/summary_placeholder"
         android:selectable="false"
         settings:enableCopying="true"
