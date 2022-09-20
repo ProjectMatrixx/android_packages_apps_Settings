@@ -80,7 +80,7 @@
         </LinearLayout>
     </com.google.android.material.appbar.AppBarLayout>
     
-    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+  <!--  <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
         android:id="@+id/fabSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -97,6 +97,6 @@
         app:iconTint="@color/settingslib_btn_colored_text_material"
         app:hideMotionSpec="@anim/fab_hide"
         app:showMotionSpec="@anim/fab_show"
-        app:icon="@drawable/ic_homepage_search"/>
+        app:icon="@drawable/ic_homepage_search"/>-->
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

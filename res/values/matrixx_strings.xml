@@ -94,4 +94,48 @@
     <string name="night_display_activation_on_custom">Turn on until <xliff:g name="time" example="6 AM">%1$s</xliff:g></string>
     <!-- Display settings screen, deactivation button action for custom schedule [CHAR LIMIT=40] -->
     <string name="night_display_activation_off_custom">Turn off until <xliff:g name="time" example="10 PM">%1$s</xliff:g></string>
+
+    <!-- Dashboard messages -->
+    <string name="dashboard_morning1">Start your day positively!</string>
+    <string name="dashboard_morning2">The Sun is up!</string>
+    <string name="dashboard_morning3">A nice morning..</string>
+    <string name="dashboard_morning4">Another day to live..</string>
+    <string name="dashboard_morning5">A new day..</string>
+    <string name="dashboard_morning_greeting1">Good Morning</string>
+    <string name="dashboard_morning_greeting2">Good day</string>
+    <string name="dashboard_noon1">Live your life.</string>
+    <string name="dashboard_noon2">Enjoy the Sunset.</string>
+    <string name="dashboard_noon3">Welcome Home..</string>
+    <string name="dashboard_noon4">Enjoy the day!</string>
+    <string name="dashboard_noon5">Welcome back..</string>
+    <string name="dashboard_noon_greeting1">Good Afternoon</string>
+    <string name="dashboard_early_night1">The night is coming..</string>
+    <string name="dashboard_early_night2">Time for dinner!</string>
+    <string name="dashboard_early_night_greeting1">Good Evening</string>
+    <string name="dashboard_night3">Sweet Dreams!</string>
+    <string name="dashboard_night4">Time to sleep now..</string>
+    <string name="dashboard_night5">Sleep tight!</string>
+    <string name="dashboard_night_greetings1">Good Night</string>
+    <string name="dashboard_midnight1">Enjoy the silence..</string>
+    <string name="dashboard_midnight2">You need help..</string>
+    <string name="dashboard_midnight3">Get some sleep..</string>
+    <string name="dashboard_midnight4">Take rest..</string>
+    <string name="dashboard_midnight5">Sleeping late?</string>
+    <string name="dashboard_random1">Hey</string>
+    <string name="dashboard_random2">Hello</string>
+    <string name="dashboard_random3">Hi</string>
+    <string name="dashboard_random4">Good day</string>
+    <string name="dashboard_random5">Howdy</string>
+    <string name="dashboard_random6">What\'s up</string>
+    <string name="dashboard_random_greetings1">Try to find some easter eggs!</string>
+    <string name="dashboard_random_greetings2">Escape to reality!</string>
+    <string name="dashboard_random_greetings3">you are trapped in matrix!</string>
+    <string name="dashboard_random_greetings4">Enjoy your day!</string>
+    <string name="settings_random1">Searching for something?</string>
+    <string name="settings_random2">Find the reality</string>
+    <string name="settings_random3">Seek and you shall find</string>
+    <string name="settings_random4">They know..!!</string>
+    <string name="settings_random5">Search for nirvana</string>
+    <string name="settings_random6">You can\'t find something that doesn\'t exists!</string>
+    <string name="default_user">User</string>
 </resources>
