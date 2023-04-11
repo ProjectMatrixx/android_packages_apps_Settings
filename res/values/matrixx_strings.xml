@@ -237,4 +237,10 @@
     <string name="smart_battery_a11y_collapse_label">Collapse, Adaptive Battery</string>
     <string name="smart_battery_title">Adaptive Battery</string>
     <string name="unified_battery_saver_page_intro">Save power to help your phone battery last longer between charges</string>
+
+    <!-- Ambient wake toggles -->
+    <string name="doze_gesture_ambient_title">Show Ambient</string>
+    <string name="doze_gesture_ambient_summary">Show Ambient Display instead of fully waking the screen up</string>
+    <string name="gesture_wake_ambient">Show Ambient</string>
+    <string name="gesture_wake">Fully wake</string>
 </resources>
