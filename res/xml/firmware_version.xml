@@ -23,8 +23,8 @@
 
     <!-- crDroid logo -->
     <com.android.settingslib.widget.LayoutPreference
-        android:layout="@layout/crdroid_logo"
-        android:key="crdroid_logo"
+        android:layout="@layout/matrixx_logo"
+        android:key="matrixx_logo"
         android:selectable="false" />
 
     <!-- Device name -->
