@@ -39,4 +39,7 @@
     <string name="doze_enabled_title">Ambient display</string>
     <string name="doze_enabled_summary">Whether to enable the doze package functionality</string>
     
+    <!-- IME button space -->
+    <string name="navigation_bar_ime_space_title">Hide IME button space</string>
+    <string name="navigation_bar_ime_space_summary">Hide IME button space below keyboard</string>
 </resources>
