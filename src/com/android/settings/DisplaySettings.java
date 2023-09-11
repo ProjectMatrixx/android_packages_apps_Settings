@@ -35,8 +35,6 @@ import com.android.settingslib.search.SearchIndexable;
 
 import lineageos.hardware.LineageHardwareManager;
 
-import com.android.settings.preferences.CustomUIPreferenceController;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -88,7 +86,6 @@ public class DisplaySettings extends DashboardFragment {
         controllers.add(new ShowOperatorNamePreferenceController(context));
         controllers.add(new ThemePreferenceController(context));
         controllers.add(new BrightnessLevelPreferenceController(context, lifecycle));
-        controllers.add(new CustomUIPreferenceController(context));
         return controllers;
     }
 

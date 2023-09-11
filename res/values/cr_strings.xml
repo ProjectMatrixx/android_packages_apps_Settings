@@ -39,8 +39,4 @@
     <!-- IME button space -->
     <string name="navigation_bar_ime_space_title">Hide IME button space</string>
     <string name="navigation_bar_ime_space_summary">Hide IME button space below keyboard</string>
-
-    <!-- CustomUI -->
-    <string name="custom_ui_toggle_title">Settings dashboard style</string>
-    <string name="custom_ui_toggle_summary">Enable card-style dashboard UI</string>
 </resources>
