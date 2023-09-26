@@ -44,8 +44,11 @@ public class FastChargingPreferenceController extends BasePreferenceController
         super(context, KEY_FAST_CHARGING);
         try {
             mFastCharge = IFastCharge.getService();
+            if (mFastCharge == null) {
+                Log.w(TAG, "IFastCharge.getService() returned null");
+            }
         } catch (NoSuchElementException | RemoteException e) {
-            Log.e(TAG, "Failed to get IFastCharge interface", e);
+            Log.w(TAG, "Failed to get IFastCharge interface", e);
         }
     }
 
