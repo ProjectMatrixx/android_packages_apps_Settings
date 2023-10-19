@@ -20,6 +20,26 @@
     xmlns:settings="http://schemas.android.com/apk/res-auto"
     android:key="top_level_settings">
 
+    <com.android.settingslib.widget.LayoutPreference
+        android:layout="@layout/top_level_preference_banner_view"
+        android:key="top_level_homepage_banner_view"
+        android:order="-180"/>
+
+    <com.android.settingslib.widget.LayoutPreference
+        android:layout="@layout/homepage_widgets"
+        android:key="top_level_homepage_widgets"
+        android:selectable="false"
+        android:order="-170" />
+
+    <com.android.settings.widget.HomepagePreference
+        android:fragment="com.crdroid.settings.crDroidSettingsLayout"
+        android:icon="@drawable/ic_matrixx"
+        android:key="top_level_crdroid"
+        android:order="-155"
+        android:title="@string/crdroid_settings_title"
+        android:summary="@string/crdroid_settings_summary"
+        settings:controller="com.crdroid.settings.TopLevelSettingsPreferenceController"/>
+
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
         android:icon="@drawable/ic_settings_wireless"
@@ -184,15 +204,6 @@
         android:summary="@string/summary_placeholder"
         settings:highlightableMenuKey="@string/menu_key_accounts"
         settings:controller="com.android.settings.accounts.TopLevelAccountEntryPreferenceController"/>
-
-    <com.android.settings.widget.HomepagePreference
-        android:fragment="com.crdroid.settings.crDroidSettingsLayout"
-        android:icon="@drawable/ic_matrixx"
-        android:key="top_level_crdroid"
-        android:order="-155"
-        android:title="@string/crdroid_settings_title"
-        android:summary="@string/crdroid_settings_summary"
-        settings:controller="com.crdroid.settings.TopLevelSettingsPreferenceController"/>
 
     <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.system.SystemDashboardFragment"
