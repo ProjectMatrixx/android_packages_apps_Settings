@@ -49,7 +49,7 @@ public class SupportPreferenceController extends BasePreferenceController {
     @Override
     public int getAvailabilityStatus() {
         boolean enabled = mContext.getResources().getBoolean(R.bool.config_support_enabled);
-        return mSupportFeatureProvider == null || !enabled ? UNSUPPORTED_ON_DEVICE : AVAILABLE;
+        return UNSUPPORTED_ON_DEVICE;
     }
 
     @Override
