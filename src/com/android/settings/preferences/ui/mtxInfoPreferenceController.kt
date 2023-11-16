@@ -97,7 +97,6 @@ class mtxInfoPreferenceController(context: Context) : AbstractPreferenceControll
         val isOfficial = releaseType == "official"
         
         val hwInfoPreference = screen.findPreference<LayoutPreference>(KEY_HW_INFO)!!
-        val swInfoPreference = screen.findPreference<LayoutPreference>(KEY_SW_INFO)!!
         val sw2InfoPreference = screen.findPreference<LayoutPreference>(KEY_SW2_INFO)!!
         val deviceInfoPreference = screen.findPreference<LayoutPreference>(KEY_DEVICE_INFO)!!
         val aboutHwInfoView: View = hwInfoPreference.findViewById(R.id.about_device_hardware)
@@ -131,26 +130,11 @@ class mtxInfoPreferenceController(context: Context) : AbstractPreferenceControll
             }
         }
 
-        swInfoPreference.apply {
-            findViewById<TextView>(R.id.android_version_summary).text = mContext.getString(R.string.device_info_platform_version)
-        }
-        
         sw2InfoPreference.apply {
             findViewById<TextView>(R.id.security_patch_summary).text = getMatrixxSecurity()
             findViewById<TextView>(R.id.kernel_info_summary).text = DeviceInfoUtils.getFormattedKernelVersion(mContext)
         }
 
-        val clickMap = mapOf(
-            R.id.android_version_details to Intent().setComponent(ComponentName("com.android.settings", "com.android.settings.Settings\$FirmwareVersionActivity"))
-           // R.id.chipset_info to Intent().setComponent(ComponentName("com.android.settings", "com.android.settings.Settings\$DevRunningServicesActivity")),
-          //  R.id.display_info to Intent().setComponent(ComponentName("com.android.settings", "com.android.settings.Settings\$DisplaySettingsActivity")),
-       )
-
-        clickMap.forEach { (id, intent) ->
-            swInfoPreference.findViewById<View>(id)?.setOnClickListener {
-                mContext.startActivity(intent)
-            }
-       }
     }
 
     override fun isAvailable(): Boolean {
@@ -163,7 +147,6 @@ class mtxInfoPreferenceController(context: Context) : AbstractPreferenceControll
 
     companion object {
         private const val KEY_HW_INFO = "my_device_hw_header"
-        private const val KEY_SW_INFO = "my_device_sw_header"
         private const val KEY_SW2_INFO = "my_device_sw2_header"
         private const val KEY_DEVICE_INFO = "my_device_info_header"
         
