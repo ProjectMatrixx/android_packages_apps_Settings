@@ -51,10 +51,6 @@ class mtxInfoPreferenceController(context: Context) : AbstractPreferenceControll
         return getPropertyOrDefault(PROP_MATRIXX_BUILD_VERSION)
     }
 
-    private fun getMatrixxStorage(): String {
-        return SystemProperties.get(PROP_MATRIXX_RAM, "0gb") + "/" + SystemProperties.get(PROP_MATRIXX_STORAGE, "0gb")
-    }
-
     private fun getMatrixxChipset(): String {
         return getPropertyOrDefault(PROP_MATRIXX_CHIPSET)
     }
@@ -118,7 +114,6 @@ class mtxInfoPreferenceController(context: Context) : AbstractPreferenceControll
         hwInfoPreference.apply {
             findViewById<TextView>(R.id.device_name).text = getDeviceName()
             findViewById<TextView>(R.id.device_chipset).text = getMatrixxChipset()
-            findViewById<TextView>(R.id.device_storage).text = getMatrixxStorage()
             findViewById<TextView>(R.id.device_battery_capacity).text = getMatrixxBattery()
             findViewById<TextView>(R.id.device_resolution).text = getMatrixxResolution()
             findViewById<TextView>(R.id.device_name_model).text = getDeviceName()
@@ -149,7 +144,6 @@ class mtxInfoPreferenceController(context: Context) : AbstractPreferenceControll
             R.id.android_version_details to Intent().setComponent(ComponentName("com.android.settings", "com.android.settings.Settings\$FirmwareVersionActivity"))
            // R.id.chipset_info to Intent().setComponent(ComponentName("com.android.settings", "com.android.settings.Settings\$DevRunningServicesActivity")),
           //  R.id.display_info to Intent().setComponent(ComponentName("com.android.settings", "com.android.settings.Settings\$DisplaySettingsActivity")),
-           // R.id.storage_info to Intent().setComponent(ComponentName("com.android.settings", "com.android.settings.Settings\$StorageDashboardActivity"))
        )
 
         clickMap.forEach { (id, intent) ->
@@ -173,7 +167,6 @@ class mtxInfoPreferenceController(context: Context) : AbstractPreferenceControll
         private const val KEY_SW2_INFO = "my_device_sw2_header"
         private const val KEY_DEVICE_INFO = "my_device_info_header"
         
-        private const val KEY_STORAGE = "device_storage"
         private const val KEY_CHIPSET = "device_chipset"
         private const val KEY_BATTERY = "device_battery_capacity"
         private const val KEY_DISPLAY = "device_resolution"
@@ -185,8 +178,6 @@ class mtxInfoPreferenceController(context: Context) : AbstractPreferenceControll
         private const val PROP_MATRIXX_BUILD_TYPE = "ro.matrixx.build.variant"
         private const val PROP_MATRIXX_BUILD_VERSION = "ro.matrixx.version"
         private const val PROP_MATRIXX_CHIPSET = "ro.matrixx.chipset"
-        private const val PROP_MATRIXX_STORAGE = "ro.matrixx.storage"
-        private const val PROP_MATRIXX_RAM = "ro.matrixx.ram"
         private const val PROP_MATRIXX_BATTERY = "ro.matrixx.battery"
         private const val PROP_MATRIXX_DISPLAY = "ro.matrixx.display_resolution"
         private const val PROP_MATRIXX_SECURITY = "ro.build.version.security_patch"
