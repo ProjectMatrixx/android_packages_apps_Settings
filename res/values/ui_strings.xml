@@ -30,9 +30,7 @@
     <string name="build_is_community_title">#community</string>
     <string name="maintainer_summary">by %s</string>
     <string name="unknown_maintainer">by someone</string>
-    <string name="device_info_platform_version">14 | fourteen | UpsideDownCake</string>
     <string name="about_matrixx_device">Matrixx Device</string>
-    <string name="device_header_info_category_title">Build type</string>
-    <string name="device_info_hw_sw_more">More</string>
+    <string name="device_desc_category_title">Device overview</string>    
     <string name="device_info_security_patch">Security update</string>
 </resources>
