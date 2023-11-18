@@ -67,7 +67,7 @@ import androidx.window.embedding.SplitRule;
 import androidx.window.java.embedding.SplitControllerCallbackAdapter;
 
 import com.android.settings.R;
-import com.android.settings.Settings;
+import android.provider.Settings;
 import com.android.settings.SettingsActivity;
 import com.android.settings.SettingsApplication;
 import com.android.settings.activityembedding.ActivityEmbeddingRulesController;
@@ -797,22 +797,6 @@ public class SettingsHomepageActivity extends FragmentActivity implements
                 mActivity.updateHomepageUI();
             }
         }
-    }
-
-    private Drawable getCircularUserIcon(Context context) {
-    	final UserManager mUserManager = getSystemService(UserManager.class);
-        Bitmap bitmapUserIcon = mUserManager.getUserIcon(UserHandle.myUserId());
-
-        if (bitmapUserIcon == null) {
-            // get default user icon.
-            final Drawable defaultUserIcon = UserIcons.getDefaultUserIcon(
-                    context.getResources(), UserHandle.myUserId(), false);
-            bitmapUserIcon = UserIcons.convertToBitmap(defaultUserIcon);
-        }
-        Drawable drawableUserIcon = new CircleFramedDrawable(bitmapUserIcon,
-                (int) context.getResources().getDimension(com.android.internal.R.dimen.user_icon_size));
-
-        return drawableUserIcon;
     }
 
     private String getOwnerName(){
