@@ -1,105 +1,135 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><!--
+Copyright (C) The 2022 dotOS Project
+Copyright (C) The 2022 RiceDroid Project
+Copyright (C) The 2023 the risingOS Android Project
+   Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+         http://www.apache.org/licenses/LICENSE-2.0
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/entity_header"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:weightSum="2">
+    android:layout_height="wrap_content">
 
-    <LinearLayout
-        android:id="@+id/firmware_details"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_weight="1"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="24dp"
-        android:orientation="vertical"
-        android:clickable="true"
-        android:clipToOutline="true"
-        android:background="@drawable/custom_preference_background">
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logo"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:minWidth="160dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="3dp">
 
-        <RelativeLayout
-            android:id="@+id/firmware_details_frame"
+        <com.android.settings.preferences.ui.BlurWallpaperView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:scaleType="centerCrop"
+            android:foreground="#7A000000"
+            android:gravity="center"
+            android:elevation="0dp"
+            android:contentDescription="@null"
+            android:orientation="vertical" />
+                
+        <LinearLayout
+            android:id="@+id/banner_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="20dp">
 
-            <TextView
-                android:id="@+id/firmware_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                style="@style/mtx_text_style_h6"
-                android:textColor="@color/mtx_text_color_primary"
-                android:text="@string/firmware_name_text"
-                android:textSize="18sp"
-                android:layout_marginStart="20dp"
-                android:layout_alignParentTop="true" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="top">
 
-            <TextView
-                android:id="@+id/firmware_version"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/firmware_name"
-                android:layout_marginTop="2dp"
-                style="@style/mtx_text_style_h6"
-                android:textColor="@color/mtx_text_color_secondary"
-                android:textSize="13sp"
-                android:layout_marginStart="20dp"/>
+                <TextView
+                    android:id="@+id/romVersion"
+                    android:text="Project Matrixx"
+                    android:paddingTop="16dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fadingEdge="horizontal"
+                    android:gravity="start"
+                    android:scrollHorizontally="true"
+                    android:singleLine="true"
+                    android:textColor="#FFFFFF"
+		            android:fontFamily="@*android:string/config_headlineFontFamily"
+                    android:textSize="22sp" />
 
-            <TextView
-                android:id="@+id/firmware_build_summary"
-                style="@style/mtx_text_style_h6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:text="@string/firmware_build_summary_title"
-                android:textSize="16sp"
-                android:textStyle="bold|italic"
-                android:textColor="@color/mtx_text_color_primary"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="24dp"
-                android:layout_alignParentBottom="true"/>
-    
-        </RelativeLayout>
+                <TextView
+                    android:id="@+id/device_name_model"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:fadingEdge="horizontal"
+                    android:paddingTop="45dp"
+                    android:layout_marginLeft="1dp"
+                    android:gravity="start"
+                    android:scrollHorizontally="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#FFFFFF"
+                    android:fontFamily="@*android:string/config_headlineFontFamily"
+                    android:textSize="12sp" />
+            </RelativeLayout>
 
-    </LinearLayout>
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="bottom">
 
-    <RelativeLayout
-        android:id="@+id/build_variant"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:layout_toRightOf="@+id/firmware_details"
-        android:layout_weight="1"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="10dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="24dp"
-        android:background="@drawable/custom_preference_background"
-        android:orientation="vertical"
-        android:clickable="true"
-        android:clipChildren="true"
-        android:clipToPadding="true"
-        android:clipToOutline="true">
+                <TextView
+                    android:id="@+id/hashtag"
+                    android:text="#Mind makes it Real!"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:fadingEdge="horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:gravity="start"
+                    android:scrollHorizontally="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="#FFFFFF"
+                    android:textSize="15sp"
+                    android:fontFamily="@*android:string/config_headlineFontFamily" />
+            </RelativeLayout>
 
-        <TextView
-            android:id="@+id/build_variant_title"
-            style="@style/mtx_text_style_h6"
+        </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="130dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:layout_centerVertical="true"
+        android:gravity="end"
+        android:layout_gravity="end"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="28dp"
+        app:strokeColor="#FFFFFF"
+        app:strokeWidth="3dp">
+
+        <com.android.settings.preferences.ui.WallpaperView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Gapps"
-            android:textSize="18sp"
-            android:textColor="@color/mtx_text_color_primary"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="20dp" />
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:gravity="center"
+            android:elevation="0dp"
+            android:contentDescription="@null"
+            android:orientation="vertical" />
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/matrixx_bg" />
+    </com.google.android.material.card.MaterialCardView>
 
-    </RelativeLayout>
-
-</LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
