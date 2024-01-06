@@ -675,4 +675,6 @@ public class Settings extends SettingsActivity {
     public static class MatrixxNotificationsActivity extends SettingsActivity {}
     public static class MatrixxButtonsActivity extends SettingsActivity {}
     public static class MatrixxAboutActivity extends SettingsActivity {}
+
+    public static class ScreenRefreshRateActivity extends SettingsActivity {}
 }

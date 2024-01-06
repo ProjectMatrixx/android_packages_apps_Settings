@@ -23,6 +23,7 @@ import com.android.settings.MainClear;
 import com.android.settings.MainClearConfirm;
 import com.android.settings.ResetNetwork;
 import com.android.settings.Settings;
+import com.android.settings.Settings.ScreenRefreshRateActivity;
 import com.android.settings.TestingSettings;
 import com.android.settings.TrustedCredentialsSettings;
 import com.android.settings.accessibility.AccessibilityDetailsSettingsFragment;
@@ -235,6 +236,7 @@ import com.matrixx.settings.fragments.misc.Miscellaneous;
 import com.matrixx.settings.fragments.buttons.Buttons;
 import com.matrixx.settings.fragments.statusbar.StatusBar;
 import com.android.settings.wifi.tether.WifiTetherSettings;
+import org.derpfest.settings.display.refreshrate.ScreenRefreshRateFragment;
 
 
 import com.matrixx.settings.fragments.misc.SmartPixels;
@@ -463,7 +465,8 @@ public class SettingsGateway {
             StatusBar.class.getName(),
             Sound.class.getName(),
             QuickSettings.class.getName(),
-            About.class.getName()
+            About.class.getName(),
+            ScreenRefreshRateFragment.class.getName(),
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -526,5 +529,6 @@ public class SettingsGateway {
             Settings.MatrixxNotificationsActivity.class.getName(),
             Settings.MatrixxButtonsActivity.class.getName(),
             Settings.MatrixxAboutActivity.class.getName(),
+            Settings.ScreenRefreshRateActivity.class.getName(),
     };
 }
