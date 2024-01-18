@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:background="@drawable/custom_preference_background"
+    android:background="@drawable/custom_single_background"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:layout_marginStart="@dimen/card_margin_start_aqua"
     android:layout_marginEnd="@dimen/card_margin_end_aqua"
-    android:layout_marginTop="20dp"
+    android:layout_marginTop="5dp"
     android:layout_marginBottom="20dp"
     android:paddingEnd="6dp"
     android:paddingStart="20dp"
