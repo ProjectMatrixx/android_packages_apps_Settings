@@ -10,11 +10,11 @@
     <LinearLayout
         android:id="@+id/battery_widget"
         android:layout_width="0dp"
-        android:layout_height="164dp"
+        android:layout_height="140dp"
         android:layout_weight="1"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="12dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="20dp"
         android:orientation="vertical"
         android:clickable="true"
         android:background="@drawable/custom_preference_background">
@@ -29,11 +29,11 @@
                 android:id="@+id/battery_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 style="@style/mtx_text_style_h6"
                 android:textColor="@color/mtx_text_color_primary"
                 android:text="@string/homepage_widget_battery_title"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:layout_marginStart="20dp"
                 android:layout_alignParentTop="true" />
 
@@ -44,9 +44,9 @@
                 android:scaleY="1"
                 android:layout_width="match_parent"
                 android:layout_height="18dp"
-                android:layout_marginHorizontal="20dp"
+                android:layout_marginHorizontal="18dp"
                 android:indeterminate="false"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="8dp"
                 android:layout_below="@+id/battery_title" />
 
             <com.android.settings.preferences.ui.ChargingPercentTextView
@@ -56,7 +56,7 @@
                 android:textSize="18sp"
                 android:layout_marginStart="20dp"
                 android:layout_below="@+id/battery_progress"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="12dp"
                 style="@style/mtx_text_style_body1"
                 android:textColor="@color/mtx_text_color_primary"/>
                 
@@ -69,7 +69,7 @@
                 android:textSize="13sp"
                 android:textColor="@color/mtx_text_color_secondary"
                 android:layout_below="@+id/battery_percent"
-                android:layout_marginTop="2dp"/>
+                android:layout_marginTop="4dp"/>
 
         </RelativeLayout>
 
@@ -78,11 +78,11 @@
     <RelativeLayout
         android:id="@+id/compact_widgets"
         android:layout_width="0dp"
-        android:layout_height="170dp"
+        android:layout_height="140dp"
         android:layout_toRightOf="@+id/battery_widget"
         android:layout_weight="1"
-        android:layout_marginTop="12dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginStart="20dp"
         android:orientation="vertical">
 
@@ -114,9 +114,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="@string/homepage_widget_storage_title"
-                        android:textSize="20sp"
+                        android:textSize="18sp"
                         android:textColor="@color/mtx_text_color_primary"
-                        android:layout_marginTop="16dp"
+                        android:layout_marginTop="8dp"
                         android:layout_marginStart="20dp"
                         android:layout_alignParentTop="true" />
 
@@ -131,8 +131,8 @@
                         android:layout_height="18dp"
                         android:indeterminate="false"
                         android:layout_below="@+id/storage_title"
-                        android:layout_marginTop="12dp"
-                        android:layout_marginBottom="20dp"/>
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="12dp"/>
 
             </RelativeLayout>
 
@@ -141,7 +141,7 @@
             <LinearLayout
                 android:id="@+id/accessibility_widgets"
                 android:layout_width="match_parent"
-                android:layout_height="58dp"
+                android:layout_height="60dp"
                 android:orientation="horizontal"
                 android:weightSum="2">
 
