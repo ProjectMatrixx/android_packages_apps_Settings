@@ -16,9 +16,9 @@ import java.util.List;
 
 import org.derpfest.display.RefreshRateManager;
 
-import org.derpfest.settings.fragment.PerAppConfigFragment;
+import org.derpfest.settings.fragment.PerAppListConfigFragment;
 
-public class PerAppRefreshRateFragment extends PerAppConfigFragment {
+public class PerAppRefreshRateFragment extends PerAppListConfigFragment {
 
     private DisplayRefreshRateHelper mHelper;
     private RefreshRateManager mRefreshRateManager;
