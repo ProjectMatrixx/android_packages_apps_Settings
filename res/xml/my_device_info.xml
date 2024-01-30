@@ -21,21 +21,12 @@
     android:key="my_device_info_pref_screen"
     android:title="@string/about_matrixx_device">
 
-    <PreferenceCategory
-        android:selectable="false"
-        android:title="@string/device_desc_category_title">
-
         <com.android.settingslib.widget.LayoutPreference
             android:key="my_device_info_header"
             android:order="-999"
             android:layout="@layout/about_device_info"
             android:selectable="false"
             settings:isPreferenceVisible="true"/>
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:selectable="false"
-        android:title="@string/build_status">
 
         <Preference
             android:key="rom_build_status"
@@ -44,19 +35,12 @@
             settings:enableCopying="true"
             android:selectable="true"/>
 
-    </PreferenceCategory>
-
-    <PreferenceCategory
-        android:selectable="false"
-        android:title="@string/device_info_hw">
-
         <com.android.settingslib.widget.LayoutPreference
             android:key="my_device_hw_header"
             android:order="-997"
             android:layout="@layout/about_device_info_hw"
             android:selectable="false"
             settings:isPreferenceVisible="true"/>
-    </PreferenceCategory>
 
     <PreferenceCategory
         android:key="device_detail_category"
