@@ -8,7 +8,7 @@
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/about_device_hardware"
-        android:layout_marginTop="3dp"
+        android:layout_marginTop="8dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/card_margin_start_aqua"
