@@ -29,7 +29,7 @@
     <string name="build_is_official_title">#official</string>
     <string name="build_is_community_title">#community</string>
     <string name="device_info_platform_version">14 | fourteen | UpsideDownCake</string>
-    <string name="device_desc_category_title">Device Banner</string>    
+    <string name="device_desc_category_title">Device Info</string>    
     <string name="device_info_hw">Hardware info</string>    
     <string name="maintainer_summary">by %s</string>
     <string name="unknown_maintainer">by someone</string>
