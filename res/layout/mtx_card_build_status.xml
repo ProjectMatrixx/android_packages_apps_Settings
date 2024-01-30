@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
-    android:background="@drawable/mtx_card_build_status_background"
+    android:background="@drawable/custom_single_background"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
     android:minHeight="?android:attr/listPreferredItemHeightSmall"
-    android:layout_marginStart="16dp"
-    android:layout_marginEnd="16dp"
-    android:layout_marginBottom="12dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginTop="15dp"
+    android:layout_marginBottom="10dp"
     android:paddingEnd="6dp"
     android:paddingStart="20dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -33,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
-                android:textColor="@color/user_crd_bg"
+                android:textColor="@color/mtx_text_color_primary"
                 style="@style/mtx_text_style_h6" />
 
             <TextView
@@ -47,7 +48,7 @@
                 android:textStyle="bold|italic"
                 android:layout_marginTop="2.0dip"
                 android:maxLines="4"
-                android:textColor="@color/card_surface_color" />
+                android:textColor="@color/mtx_text_color_secondary" />
         </RelativeLayout>
 
         <FrameLayout
