@@ -73,16 +73,6 @@ public class MyDeviceInfoFragment extends DashboardFragment
     private static final String KEY_EID_INFO = "eid_info";
     private static final String KEY_MY_DEVICE_INFO_HEADER = "my_device_info_header";
 
-    private final BroadcastReceiver mSimStateReceiver = new BroadcastReceiver() {
-        public void onReceive(Context context, Intent intent) {
-            final String action = intent.getAction();
-            if (TelephonyIntents.ACTION_SIM_STATE_CHANGED.equals(action)) {
-                String state = intent.getStringExtra(IccCardConstants.INTENT_KEY_ICC_STATE);
-                Log.d(LOG_TAG, "Received ACTION_SIM_STATE_CHANGED: " + state);
-                updatePreferenceStates();
-            }
-        }
-    };
 
     private BuildNumberPreferenceController mBuildNumberPreferenceController;
 
@@ -109,28 +99,6 @@ public class MyDeviceInfoFragment extends DashboardFragment
         super.onStart();
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        Context context = getContext();
-        if (context != null) {
-            context.unregisterReceiver(mSimStateReceiver);
-        } else {
-            Log.i(LOG_TAG, "context already null, not unregistering SimStateReceiver");
-        }
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        Context context = getContext();
-        if (context != null) {
-            context.registerReceiver(mSimStateReceiver,
-                    new IntentFilter(TelephonyIntents.ACTION_SIM_STATE_CHANGED));
-        } else {
-            Log.i(LOG_TAG, "context is null, not registering SimStateReceiver");
-        }
-    }
 
     @Override
     protected String getLogTag() {
