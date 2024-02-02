@@ -279,7 +279,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
                         .getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
             }
         }
-        
+	final View root = findViewById(R.id.settings_homepage_container);
 	final TextView textView = root.findViewById(R.id.user_title);
 	final TextView homepageTitle = root.findViewById(R.id.homepage_title);
 
@@ -299,10 +299,6 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         String greetingsN = getResources().getString(R.string.dashboard_night_greetings1);
         String greetingsNoon = getResources().getString(R.string.dashboard_noon_greeting1);
         String random6 = getResources().getString(R.string.dashboard_random6);
-
-	    Random genSearchMsg = new Random();
-	    int searchRnd = genSearchMsg.nextInt(randomMsgSearch.length-1);
-        searchTextView.setText(randomMsgSearch[searchRnd]);
 
         switch (Calendar.getInstance().get(Calendar.HOUR_OF_DAY)) {
             case 5: case 6: case 7: case 8: case 9: case 10:
