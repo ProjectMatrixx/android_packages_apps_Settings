@@ -23,6 +23,9 @@
     android:title="@string/edge_to_edge_navigation_title"
     settings:keywords="@string/keywords_gesture_navigation_settings">
 
+    <PreferenceCategory
+            android:title="@string/gesture_nav_hint">
+
     <lineageos.preference.LineageSystemSettingSwitchPreference
         android:key="navigation_bar_hint"
         android:title="@string/show_navbar_hint_title"
@@ -47,6 +50,10 @@
         settings:textStart="@string/thin_label"
         settings:textEnd="@string/thick_label"
         android:dependency="navigation_bar_hint" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:title="@string/gesture_nav_back">
 
     <com.android.settings.widget.LabeledSeekBarPreference
         android:key="gesture_back_height"
@@ -68,6 +75,22 @@
         android:title="@string/back_gesture_haptic_title"
         android:summary="@string/back_gesture_haptic_summary"
         android:defaultValue="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="assistant_gesture_category"
+        android:persistent="false"
+        android:title="@string/assistant_gesture_category_title">
+
+    <SwitchPreference
+        android:key="assistant_gesture_corner_swipe"
+        android:title="@string/assistant_corner_gesture_title"
+        android:summary="@string/assistant_corner_gesture_summary"
+        settings:controller="com.android.settings.gestures.GestureNavigationSettingsAssistController" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:title="@string/nav_ime_space">
 
     <com.crdroid.settings.preferences.SystemSettingListPreference
         android:key="navigation_bar_ime_space"
@@ -75,19 +98,6 @@
         android:entries="@array/navigation_bar_ime_space_entries"
         android:entryValues="@array/navigation_bar_ime_space_values"
         android:defaultValue="0" />
-
-    <PreferenceCategory
-        android:key="assistant_gesture_category"
-        android:persistent="false"
-        android:title="@string/assistant_gesture_category_title">
-
-        <SwitchPreference
-            android:key="assistant_gesture_corner_swipe"
-            android:title="@string/assistant_corner_gesture_title"
-            android:summary="@string/assistant_corner_gesture_summary"
-            settings:controller="com.android.settings.gestures.GestureNavigationSettingsAssistController"
-        />
-
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -129,4 +139,3 @@
         android:selectable="false"
         settings:searchable="false"/>
 </PreferenceScreen>
-
