@@ -231,7 +231,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         
         // Homepage redesign start
         // initSearchBarView();
-        
+
         AppBarLayout appBarLayout = findViewById(R.id.app_bar);
         final ExtendedFloatingActionButton fabSearch = findViewById(R.id.fabSearch);
         FeatureFactory.getFactory(this)
@@ -280,7 +280,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
             }
         }
 	final View root = findViewById(R.id.settings_homepage_container);
-	final TextView textView = root.findViewById(R.id.user_title);
+    final TextView textView = root.findViewById(R.id.user_title);
 	final TextView homepageTitle = root.findViewById(R.id.homepage_title);
 
 	textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, getResources().getDimensionPixelSize(R.dimen.header_text_size_contextual));
