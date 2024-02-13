@@ -69,7 +69,7 @@ Copyright (C) The 2023 the risingOS Android Project
 
                 <TextView
                     android:id="@+id/hashtag"
-                    android:text="#Mind makes it Real...!"
+                    android:text="E S C A P E"
                     android:layout_width="150dp"
                     android:layout_height="wrap_content"
                     android:fadingEdge="horizontal"

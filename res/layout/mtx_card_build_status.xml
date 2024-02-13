@@ -61,8 +61,8 @@
             <androidx.preference.internal.PreferenceImageView
                 android:id="@android:id/icon"
                 android:padding="1.5dip"
-                android:layout_width="24dp"
-                android:layout_height="24dp"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
                 app:maxHeight="52.5dp"
                 app:maxWidth="52.5dp" />
 
