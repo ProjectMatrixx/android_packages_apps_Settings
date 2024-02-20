@@ -33,7 +33,17 @@ object DeviceInfoUtil {
         val totalMemoryBytes = memInfoReader.totalSize
         val totalMemoryGB = totalMemoryBytes / (1024.0 * 1024.0 * 1024.0)
         val roundedMemoryGB = ceil(totalMemoryGB).toInt()
-        return "$roundedMemoryGB GB"
+
+        val aproxRam = when {
+            roundedMemoryGB in 1..2 -> "2"
+            roundedMemoryGB <= 3 -> "3"
+            roundedMemoryGB <= 4 -> "4"
+            roundedMemoryGB <= 6 -> "6"
+            roundedMemoryGB <= 8 -> "8"
+            roundedMemoryGB <= 12 -> "12"
+        else -> "12+"
+        }
+        return "$aproxRam GB"
     }
 
     fun getStorageTotal(context: Context): String {
