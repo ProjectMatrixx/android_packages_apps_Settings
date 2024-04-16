@@ -33,7 +33,8 @@
     <com.crdroid.settings.preferences.SystemSettingSwitchPreference
         android:key="navigation_bar_ime_space"
         android:title="@string/navigation_bar_ime_space_title"
-        android:summary="@string/navigation_bar_ime_space_summary" />
+        android:summary="@string/navigation_bar_ime_space_summary"
+        settings:position="none" />
 
     <com.android.settings.widget.LabeledSeekBarPreference
         android:key="gesture_navbar_length_preference"
@@ -66,7 +67,8 @@
         android:key="back_gesture_arrow"
         android:title="@string/back_gesture_arrow_title"
         android:summary="@string/back_gesture_arrow_summary"
-        android:defaultValue="true" />
+        android:defaultValue="true"
+        settings:position="none" />
 
     <com.crdroid.settings.preferences.SecureSettingSwitchPreference
         android:key="back_gesture_haptic"

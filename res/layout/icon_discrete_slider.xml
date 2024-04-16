@@ -44,7 +44,7 @@
 
     <SeekBar
         android:id="@*android:id/seekbar"
-        style="@android:style/Widget.Material.SeekBar.Discrete"
+        style="@android:style/Widget.Material.SeekBar"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_gravity="center_vertical"
