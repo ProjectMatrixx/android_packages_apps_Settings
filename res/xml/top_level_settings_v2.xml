@@ -52,9 +52,9 @@
 
         <com.android.settings.widget.HomepagePreference
             android:fragment="com.crdroid.settings.crDroidSettingsLayout"
-            android:icon="@drawable/ic_settings_cogs_filled"
+            android:icon="@drawable/ic_matrixx"
             android:key="top_level_crdroid"
-            android:order="-60"
+            android:order="-160"
             android:title="@string/crdroid_settings_title"
             android:summary="@string/crdroid_settings_summary"
             settings:controller="com.crdroid.settings.TopLevelSettingsPreferenceController"/>
@@ -192,14 +192,13 @@
         android:layout="@layout/settingslib_preference_category_no_title">
 
         <com.android.settings.widget.HomepagePreference
-            android:fragment="com.android.settings.accessibility.AccessibilitySettings"
-            android:icon="@drawable/ic_settings_accessibility_filled"
-            android:key="top_level_accessibility"
-            android:order="-60"
-            android:title="@string/accessibility_settings"
-            android:summary="@string/accessibility_settings_summary"
-            settings:highlightableMenuKey="@string/menu_key_accessibility"
-            settings:controller="com.android.settings.accessibility.TopLevelAccessibilityPreferenceController"/>
+            android:icon="@drawable/ic_homepage_wellbeing"
+            android:key="top_level_wb"
+            android:order="-51"
+            android:title="@string/wellbeing_title"
+            android:summary="@string/summary_placeholder"
+            settings:highlightableMenuKey="top_level_wellbeing"
+            settings:controller="com.android.settings.home.WellbeingPreferenceController"/>
 
         <com.android.settings.widget.HomepagePreference
             android:icon="@drawable/ic_settings_safety_center_filled"
@@ -259,6 +258,16 @@
             android:fragment="com.android.settings.emergency.EmergencyDashboardFragment"
             settings:isPreferenceVisible="@bool/config_show_emergency_settings"
             settings:highlightableMenuKey="@string/menu_key_emergency"/>
+
+        <com.android.settings.widget.HomepagePreference
+            android:fragment="com.android.settings.accessibility.AccessibilitySettings"
+            android:icon="@drawable/ic_settings_accessibility_filled"
+            android:key="top_level_accessibility"
+            android:order="-20"
+            android:title="@string/accessibility_settings"
+            android:summary="@string/accessibility_settings_summary"
+            settings:highlightableMenuKey="@string/menu_key_accessibility"
+            settings:controller="com.android.settings.accessibility.TopLevelAccessibilityPreferenceController"/>
 
         <com.android.settings.widget.HomepagePreference
             android:icon="@drawable/ic_help_filled"
