@@ -230,6 +230,15 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         super.onCreatePreferences(savedInstanceState, rootKey);
         if (Flags.homepageRevamp()) {
+            iteratePreferences(preference -> {
+                if (Flags.homepageRevamp()) {
+                    String prefKey = preference.getKey();
+                    if (prefKey.equals("top_level_wellbeing")) {
+                        preference.setVisible(false);
+                    }
+                    return;
+                }
+            });
             return;
         }
         int tintColor = Utils.getHomepageIconColor(getContext());
