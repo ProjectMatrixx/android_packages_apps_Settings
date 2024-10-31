@@ -31,14 +31,15 @@
         android:paddingStart="24dp"
         android:paddingEnd="24dp"
         android:focusedByDefault="true"
-        android:background="@drawable/search_bar_selected_background">
+        android:background="@drawable/search_bar_selected_background_v2">
 
         <ImageView
             android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:importantForAccessibility="no"
-            android:src="@drawable/ic_homepage_search" />
+            android:src="@drawable/ic_homepage_search"
+            android:tint="@color/top_level_preference_text_color_primary" />
         <TextView
             android:id="@+id/search_bar_title"
             style="@style/TextAppearance.SearchBar"
@@ -46,6 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:paddingEnd="8dp"
-            android:text="@string/homepage_search"/>
+            android:text="@string/search_settings"
+            android:textColor="@color/top_level_preference_text_color_primary"/>
     </LinearLayout>
 </com.google.android.material.card.MaterialCardView>
