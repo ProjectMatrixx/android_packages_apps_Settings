@@ -458,6 +458,11 @@ public class DashboardFeatureProviderImpl implements DashboardFeatureProvider {
         }
         // Tint homepage icons
         if (TextUtils.equals(tile.getCategory(), CategoryKey.CATEGORY_HOMEPAGE)) {
+            if (iconPackage.equals(WELLBEING_PACKAGE) && iconDrawable instanceof LayerDrawable
+                    && ((LayerDrawable) iconDrawable).getDrawable(1) != null) {
+                iconDrawable = ((LayerDrawable) iconDrawable).getDrawable(1);
+                iconDrawable.mutate();
+            }
             // Skip tinting and Adaptive Icon transformation for homepage account type raw icons
             if (TextUtils.equals(tile.getGroupKey(), "top_level_account_category")
                     && iconPackage == null) {
