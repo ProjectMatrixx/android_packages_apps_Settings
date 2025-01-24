@@ -257,7 +257,6 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                 preference.setLayoutResource(R.layout.matrixx_dashboard_preference_top);
             } else if (key.equals("top_level_battery")
             	|| key.equals("top_level_display")
-                || key.equals("top_level_crdroid")
             	|| key.equals("top_level_security")
             	|| key.equals("top_level_privacy")
             	|| key.equals("top_level_safety_center")
@@ -269,7 +268,9 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                 preference.setLayoutResource(R.layout.matrixx_dashboard_preference_bottom);
             } else if (key.equals("top_level_accounts") && gAppsExists){
                 preference.setLayoutResource(R.layout.matrixx_dashboard_preference_middle);
-            } 
+            } else if (key.equals("top_level_crdroid")) {
+                preference.setLayoutResource(R.layout.matrixx_dashboard_preference_single);
+            }
             else {
                 preference.setLayoutResource(R.layout.matrixx_dashboard_preference_bottom);
             }
