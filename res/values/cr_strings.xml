@@ -16,18 +16,6 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- extra dim schedule -->
-    <string name="extra_dim_schedule_title">Schedule</string>
-    <string name="disabled">Disabled</string>
-    <string name="always_on_display_schedule_title">Always on display schedule</string>
-    <string name="always_on_display_schedule_sunset">Sunset</string>
-    <string name="always_on_display_schedule_sunrise">Sunrise</string>        
-    <string name="always_on_display_schedule_mixed_sunset">Turns on from sunset till a time</string>
-    <string name="always_on_display_schedule_mixed_sunrise">Turns on from a time till sunrise</string>
-
-    <!-- Screen resolution -->
-    <string name="custom_screen_resolution_title">Custom screen resolution</string>
-
     <!-- Matrixx maintainer -->
     <string name="matrixx_maintainer_title">Device maintainer</string>
     <string name="matrixx_maintainer">Unknown</string>
