@@ -28,12 +28,15 @@
         android:title="@string/show_navbar_hint_title"
         android:summary="@string/show_navbar_hint_summary"
         android:defaultValue="true"
-        settings:requiresPackage="com.custom.overlay.systemui.gestural.hidden" />
+        settings:requiresPackage="org.lineageos.overlay.customization.navbar.nohint" />
 
-    <com.crdroid.settings.preferences.SystemSettingSwitchPreference
+    <lineageos.preference.LineageSystemSettingListPreference
         android:key="navigation_bar_ime_space"
         android:title="@string/navigation_bar_ime_space_title"
-        android:summary="@string/navigation_bar_ime_space_summary" />
+        android:summary="%s"
+        android:entries="@array/navigation_bar_ime_space_entries"
+        android:entryValues="@array/navigation_bar_ime_space_values"
+        android:defaultValue="0"/>
 
     <com.android.settings.widget.LabeledSeekBarPreference
         android:key="gesture_navbar_length_preference"
