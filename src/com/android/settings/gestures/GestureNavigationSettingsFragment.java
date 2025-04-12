@@ -30,6 +30,7 @@ import android.view.WindowManager;
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreferenceCompat;
+import com.android.internal.util.matrixx.Utils;
 
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
@@ -51,6 +52,7 @@ import lineageos.providers.LineageSettings;
 import static com.android.systemui.shared.recents.utilities.Utilities.isLargeScreen;
 
 import static org.lineageos.internal.util.DeviceKeysConstants.*;
+import lineageos.preference.LineageSystemSettingSwitchPreference;
 
 /**
  * A fragment to include all the settings related to Gesture Navigation mode.
@@ -65,6 +67,7 @@ public class GestureNavigationSettingsFragment extends DashboardFragment impleme
             "com.android.settings.GESTURE_NAVIGATION_SETTINGS";
     static final String ACTION_GESTURE_SANDBOX = "com.android.quickstep.action.GESTURE_SANDBOX";
 
+    private static final String GESTURE_HINT_KEY = "navigation_bar_hint";
     private static final String LEFT_EDGE_SEEKBAR_KEY = "gesture_left_back_sensitivity";
     private static final String RIGHT_EDGE_SEEKBAR_KEY = "gesture_right_back_sensitivity";
     private static final String GESTURE_TUTORIAL_KEY = "assistant_gesture_navigation_tutorial";
@@ -79,6 +82,9 @@ public class GestureNavigationSettingsFragment extends DashboardFragment impleme
     final Intent mLaunchTutorialIntent =  new Intent(ACTION_GESTURE_SANDBOX)
             .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
             .putExtra("use_tutorial_menu", true);
+
+    private static final String NEXUSLAUNCHER_PACKAGE_NAME = "com.google.android.apps.nexuslauncher";
+    private static final String NOGESTUREHINT_OVERLAY = "com.google.android.apps.nexuslauncher.overlay.nogesturehint";
 
     private WindowManager mWindowManager;
     private BackGestureIndicatorView mIndicatorView;
@@ -157,6 +163,17 @@ public class GestureNavigationSettingsFragment extends DashboardFragment impleme
                 (SwitchPreferenceCompat) getPreferenceScreen().findPreference(KEY_GESTURE_HAPTIC);
             getPreferenceScreen().removePreference(gestureHaptic);
         }
+        LineageSystemSettingSwitchPreference gestureHintPref =
+                getPreferenceScreen().findPreference(GESTURE_HINT_KEY);
+
+        gestureHintPref.setOnPreferenceChangeListener((preference, newValue) -> {
+            if (Utils.isPackageInstalled(getContext(), NEXUSLAUNCHER_PACKAGE_NAME)) {
+                Utils.toggleOverlay(getContext(), NOGESTUREHINT_OVERLAY, !(Boolean) newValue);
+                Utils.restartApp(NEXUSLAUNCHER_PACKAGE_NAME, getContext());
+            }
+
+            return true;
+        });
     }
 
     @Override
