@@ -17,6 +17,8 @@
 <resources>
     <dimen name="match_parent">-1px</dimen>
 
+    <dimen name="custom_avatar_length">60dp</dimen>
+
     <dimen name="app_icon_size">40dip</dimen>
     <dimen name="min_tap_target_size">48dp</dimen>
     <dimen name="screen_margin_sides">64dip</dimen>
