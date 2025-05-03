@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Display settings screen, peak refresh rate settings summary [CHAR LIMIT=NONE] -->
+    <string name="refresh_rate_title">Частота обновления</string>
+    <string name="refresh_rate_summary_vrr_off">%d Гц</string>
+    <string name="refresh_rate_summary_vrr_on">%d Гц (адаптивная)</string>
+    <string name="refresh_rate_vrr_title">Адаптивная частота обновления</string>
+    <string name="refresh_rate_vrr_summary">Автоматически снижает частоту обновления, когда экран неактивен, чтобы сэкономить энергию. Может вызывать мерцание или искажение цветов на некоторых экранах</string>
+    <string name="refresh_rate_footer">Более высокая частота обновления делает изображение на экране плавнее, но увеличивает энергопотребление</string>
+    <string name="keywords_refresh_rate">частота, обновление, плавность, пиковая, 60гц, 90гц, 120гц, 144гц, 165гц</string>
+    <string name="peak_refresh_rate_summary_custom">Автоматически увеличивает частоту обновления с 60 до %1$d Гц для определённого контента. Увеличивает расход заряда батареи.</string>
+</resources>
