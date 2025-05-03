@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2007 The Android Open Source Project
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+          http://www.apache.org/licenses/LICENSE-2.0
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Radio Info -->
+    <string name="radio_info_title">Информация о радио</string>
+
+    <!-- Media player settings -->
+    <string name="media_controls_always_show_time_title">Всегда показывать время</string>
+    <string name="media_controls_always_show_time_summary">Всегда отображать прошедшее и общее время в медиаплеере</string>
+
+    <!-- Smart 5G -->
+    <string name="smart_5g_title">Smart 5G</string>
+    <string name="smart_5g_summary">Автоматически переключаться между 5G и 4G для снижения расхода батареи</string>
+
+    <!-- Reality Display Engine -->
+    <string name="display_engine_category">Движок дисплея</string>
+    <string name="display_engine_mode_title">Реалистичный движок дисплея</string>
+    <string name="x_reality_engine_mode_title">Движок X-Reality</string>
+    <string name="triluminous_display_mode_title">Технология дисплея Triluminous</string>
+    <string name="vivid_engine_mode_title">Яркий дисплей</string>
+    <string name="display_engine_default">По умолчанию</string>
+    <string name="display_engine_mode_footer_text">Вдохновлённый технологиями Sony Bravia/X-Reality, движок дисплея включает режим "Яркий" для повышения яркости и насыщенности цветов, а также режим X-Reality для улучшенной детализации и точности цветопередачи.</string>
+   
+    <!-- Doze on double tap -->
+    <string name="double_tap_title">Двойное касание</string>
+    <string name="doze_double_tap_title">Двойное касание для проверки телефона</string>
+    <string name="doze_double_tap_summary">Показ уведомлений по двойному касанию</string>
+
+    <!-- Idle manager -->
+    <string name="idle_manager_title">Менеджер ожидания</string>
+    <string name="idle_manager_summary">Останавливать все неважные фоновые процессы, когда устройство неактивно</string>
+
+    <string name="wellbeing_title">Цифровое благополучие &amp; родительский контроль</string>
+    <string name="wellbeing_summary">Время использования экрана, таймеры приложений, расписание сна</string>
+</resources>
