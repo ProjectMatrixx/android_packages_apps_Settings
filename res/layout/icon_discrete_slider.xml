@@ -42,9 +42,9 @@
             android:tintMode="src_in" />
     </FrameLayout>
 
-    <com.android.settingslib.widget.DiscreteRoundedSeekBar
+    <SeekBar
         android:id="@*android:id/seekbar"
-        style="@style/SeekBar.SettingsLib.Discrete"
+        style="@android:style/Widget.Material.SeekBar.Discrete"
         android:layout_width="0dp"
         android:layout_height="48dp"
         android:layout_gravity="center_vertical"
