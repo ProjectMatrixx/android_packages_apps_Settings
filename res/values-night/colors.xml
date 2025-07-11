@@ -15,19 +15,32 @@
 -->
 
 <resources
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
 
     <!-- Dashboard/homepage icon colors -->
-    <color name="homepage_blue_variant_bg">@color/m3_ref_palette_blue_variant80</color>
-    <color name="homepage_blue_bg">@color/m3_ref_palette_blue80</color>
-    <color name="homepage_pink_bg">@color/m3_ref_palette_pink80</color>
-    <color name="homepage_orange_bg">@color/m3_ref_palette_orange80</color>
-    <color name="homepage_yellow_bg">@color/m3_ref_palette_yellow80</color>
-    <color name="homepage_green_bg">@color/m3_ref_palette_green80</color>
-    <color name="homepage_grey_bg">@color/m3_ref_palette_grey80</color>
-    <color name="homepage_cyan_bg">@color/m3_ref_palette_cyan80</color>
-    <color name="homepage_red_bg">@color/m3_ref_palette_red80</color>
-    <color name="homepage_purple_bg">@color/m3_ref_palette_purple80</color>
+    <color name="homepage_blue_variant_fg">@*android:color/accent_device_default_dark</color>
+    <color name="homepage_blue_variant_bg">@android:color/system_neutral1_600</color>
+    <color name="homepage_blue_fg">@*android:color/accent_device_default_dark</color>
+    <color name="homepage_blue_bg">@android:color/system_neutral1_600</color>
+    <color name="homepage_pink_fg">@*android:color/accent_device_default_dark</color>
+    <color name="homepage_pink_bg">@android:color/system_neutral1_600</color>
+    <color name="homepage_orange_fg">@*android:color/accent_device_default_dark</color>
+    <color name="homepage_orange_bg">@android:color/system_neutral1_600</color>
+    <color name="homepage_yellow_fg">@*android:color/accent_device_default_dark</color>
+    <color name="homepage_yellow_bg">@android:color/system_neutral1_600</color>
+    <color name="homepage_green_fg">@*android:color/accent_device_default_dark</color>
+    <color name="homepage_green_bg">@android:color/system_neutral1_600</color>
+    <color name="homepage_grey_fg">@*android:color/accent_device_default_dark</color>
+    <color name="homepage_grey_bg">@android:color/system_neutral1_600</color>
+    <color name="homepage_cyan_fg">@*android:color/accent_device_default_dark</color>
+    <color name="homepage_cyan_bg">@android:color/system_neutral1_600</color>
+    <color name="homepage_red_fg">@*android:color/accent_device_default_dark</color>
+    <color name="homepage_red_bg">@android:color/system_neutral1_600</color>
+    <color name="homepage_purple_fg">@*android:color/accent_device_default_dark</color>
+    <color name="homepage_purple_bg">@android:color/system_neutral1_600</color>
+    <color name="homepage_dark_green_bg">@android:color/system_neutral1_600</color>
+    <color name="homepage_purple_variant_bg">@android:color/system_neutral1_600</color>
 
     <color name="contextual_card_dismissal_background">@*android:color/background_device_default_dark</color>
     <color name="contextual_card_background">@*android:color/background_device_default_dark</color>
