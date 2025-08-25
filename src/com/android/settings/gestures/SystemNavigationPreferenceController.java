@@ -39,7 +39,7 @@ public class SystemNavigationPreferenceController extends BasePreferenceControll
 
     @Override
     public int getAvailabilityStatus() {
-        return AVAILABLE;
+        return isGestureAvailable(mContext) ? AVAILABLE : UNSUPPORTED_ON_DEVICE;
     }
 
     @Override
