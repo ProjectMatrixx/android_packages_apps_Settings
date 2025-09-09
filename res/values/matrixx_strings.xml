@@ -210,4 +210,12 @@
     <string name="wifi_do_not_validate_eap_server">Do not validate</string>
     <!-- Warning message displayed if user choses not to validate the EAP server -->
     <string name="wifi_do_not_validate_eap_server_warning">No certificate specified. Your connection will not be private.</string>
+
+    <!-- HBM -->
+    <string name="auto_hbm_enabled_title">Auto High Brightness Mode</string>
+    <string name="auto_hbm_enabled_summary">Automatically enable high brightness mode in strong sunlight. Increases battery usage.</string>
+    <string name="auto_hbm_lux_on_title">HBM Activation Threshold</string>
+    <string name="auto_hbm_lux_on_summary">Ambient light level at which high brightness mode will turn on</string>
+    <string name="auto_hbm_lux_off_title">HBM Deactivation Threshold</string>
+    <string name="auto_hbm_lux_off_summary">Ambient light level below which high brightness mode will turn off</string>
 </resources>
