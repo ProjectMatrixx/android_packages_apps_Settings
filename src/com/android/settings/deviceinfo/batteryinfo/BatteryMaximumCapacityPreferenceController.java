@@ -46,11 +46,22 @@ public class BatteryMaximumCapacityPreferenceController extends BasePreferenceCo
         Intent batteryIntent = BatteryUtils.getBatteryIntent(mContext);
         final int maxCapacityUah =
                 batteryIntent.getIntExtra(BatteryManager.EXTRA_MAXIMUM_CAPACITY, -1);
-        int designCapacityUah =
-                batteryIntent.getIntExtra(BatteryManager.EXTRA_DESIGN_CAPACITY, -1);
-        if (designCapacityUah <= 0) {
+
+        boolean usePowerProfileFirst = mContext.getResources().getBoolean(R.bool.config_use_power_profile_for_battery_capacity);
+        int designCapacityUah = -1;
+
+        if (usePowerProfileFirst) {
             final PowerProfile profile = new PowerProfile(mContext);
             designCapacityUah = (int) profile.getBatteryCapacity() * 1000;
+            if (designCapacityUah <= 0) {
+                designCapacityUah = batteryIntent.getIntExtra(BatteryManager.EXTRA_DESIGN_CAPACITY, -1);
+            }
+        } else {
+            designCapacityUah = batteryIntent.getIntExtra(BatteryManager.EXTRA_DESIGN_CAPACITY, -1);
+            if (designCapacityUah <= 0) {
+                final PowerProfile profile = new PowerProfile(mContext);
+                designCapacityUah = (int) profile.getBatteryCapacity() * 1000;
+            }
         }
 
         if (maxCapacityUah > 0 && designCapacityUah > 0) {

@@ -58,4 +58,7 @@
 
     <!-- Show Now Playing -->
     <bool name="config_show_now_playing">false</bool>
+
+    <!-- Whether to use PowerProfile as the primary source for battery design capacity -->
+    <bool name="config_use_power_profile_for_battery_capacity">false</bool>
 </resources>

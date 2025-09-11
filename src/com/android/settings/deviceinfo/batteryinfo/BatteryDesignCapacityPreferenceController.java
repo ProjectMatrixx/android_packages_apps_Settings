@@ -43,12 +43,23 @@ public class BatteryDesignCapacityPreferenceController extends BasePreferenceCon
 
     @Override
     public CharSequence getSummary() {
-        Intent batteryIntent = BatteryUtils.getBatteryIntent(mContext);
-        int designCapacityUah =
-                batteryIntent.getIntExtra(BatteryManager.EXTRA_DESIGN_CAPACITY, -1);
-        if (designCapacityUah <= 0) {
+        boolean usePowerProfileFirst = mContext.getResources().getBoolean(R.bool.config_use_power_profile_for_battery_capacity);
+        int designCapacityUah = -1;
+
+        if (usePowerProfileFirst) {
             final PowerProfile profile = new PowerProfile(mContext);
             designCapacityUah = (int) profile.getBatteryCapacity() * 1000;
+            if (designCapacityUah <= 0) {
+                Intent batteryIntent = BatteryUtils.getBatteryIntent(mContext);
+                designCapacityUah = batteryIntent.getIntExtra(BatteryManager.EXTRA_DESIGN_CAPACITY, -1);
+            }
+        } else {
+            Intent batteryIntent = BatteryUtils.getBatteryIntent(mContext);
+            designCapacityUah = batteryIntent.getIntExtra(BatteryManager.EXTRA_DESIGN_CAPACITY, -1);
+            if (designCapacityUah <= 0) {
+                final PowerProfile profile = new PowerProfile(mContext);
+                designCapacityUah = (int) profile.getBatteryCapacity() * 1000;
+            }
         }
 
         if (designCapacityUah > 0) {
