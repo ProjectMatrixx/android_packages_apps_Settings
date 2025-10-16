@@ -278,4 +278,12 @@
     <!-- Multi Audio Focus -->
     <string name="multi_audio_focus_title">Multi audio focus</string>
     <string name="multi_audio_focus_summary">Allow multiple apps to play audio simultaneously</string>
+
+   <!-- Hide screen capture status -->
+    <string name="hide_screen_capture_status_title">Hide screen capture status</string>
+    <string name="hide_screen_capture_status_summary">Hide screen capture and screen record status from all applications. Can be convenient in some cases but may lead to privacy leaks.</string>
+
+    <!-- Override Mock Location restriction -->
+    <string name="override_mock_location_title">Override MockLocation restriction</string>
+    <string name="override_mock_location_summary">When enabled, apps cannot detect mock locations</string>
 </resources>

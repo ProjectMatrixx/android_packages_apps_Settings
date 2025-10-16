@@ -53,6 +53,14 @@
     <com.android.settingslib.widget.UntitledPreferenceCategory
         android:key="location_advanced_settings">
 
+        <SwitchPreferenceCompat
+            android:key="override_mock_location"
+            android:title="@string/override_mock_location_title"
+            android:summaryOn="Mock locations are hidden from apps"
+            android:summaryOff="Apps can detect mock locations" 
+            android:defaultValue="false"
+            settings:controller="com.android.settings.location.OverrideMockLocationPreferenceController" />
+
         <!-- This preference gets removed if there is no managed profile -->
         <com.android.settingslib.RestrictedSwitchPreference
             android:enabled="false"
