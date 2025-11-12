@@ -34,18 +34,6 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <include
-                android:id="@+id/suggestion_container_two_pane"
-                layout="@layout/suggestion_container_two_pane"
-                android:visibility="gone"/>
-
-            <FrameLayout
-                android:id="@+id/contextual_cards_content"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/contextual_card_side_margin"
-                android:layout_marginEnd="@dimen/contextual_card_side_margin"/>
-
             <FrameLayout
                 android:id="@+id/main_content"
                 android:layout_width="match_parent"

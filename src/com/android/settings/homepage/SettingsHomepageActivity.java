@@ -166,14 +166,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         if (mAllowUpdateSuggestion) {
             Log.i(TAG, "showHomepageWithSuggestion: " + showSuggestion);
             mAllowUpdateSuggestion = false;
-            if (homepageRevamp()) {
-                mSuggestionView.setVisibility(showSuggestion ? View.VISIBLE : View.GONE);
-            } else {
-                mSuggestionView.setVisibility(showSuggestion ? View.VISIBLE : View.GONE);
-                mTwoPaneSuggestionView.setVisibility(showSuggestion ? View.VISIBLE : View.GONE);
-            }
         }
-
         if (mHomepageView == null) {
             return;
         }
@@ -316,13 +309,6 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         if (!getSystemService(ActivityManager.class).isLowRamDevice()) {
             final boolean scrollNeeded = mIsEmbeddingActivityEnabled
                     && !TextUtils.equals(getString(DEFAULT_HIGHLIGHT_MENU_KEY), highlightMenuKey);
-            showSuggestionFragment(scrollNeeded);
-            if (!Flags.updatedSuggestionCardAosp()
-                    && FeatureFlagUtils.isEnabled(this, FeatureFlags.CONTEXTUAL_HOME)) {
-                showFragment(() -> new ContextualCardsFragment(), R.id.contextual_cards_content);
-                ((FrameLayout) findViewById(R.id.main_content))
-                        .getLayoutTransition().enableTransitionType(LayoutTransition.CHANGING);
-            }
         }
         mMainFragment = showFragment(() -> {
             final TopLevelSettings fragment = new TopLevelSettings();
@@ -518,36 +504,11 @@ public class SettingsHomepageActivity extends FragmentActivity implements
     }
 
     private void showSuggestionFragment(boolean scrollNeeded) {
-        final Class<? extends Fragment> fragmentClass = FeatureFactory.getFeatureFactory()
-                .getSuggestionFeatureProvider().getSuggestionFragment();
-        if (fragmentClass == null) {
-            return;
-        }
 
-        if (homepageRevamp()) {
-            mSuggestionView = findViewById(R.id.suggestion_content);
-        } else {
-            mSuggestionView = findViewById(R.id.suggestion_content);
-            mTwoPaneSuggestionView = findViewById(R.id.two_pane_suggestion_content);
-        }
+        mSuggestionView = null;
+        mTwoPaneSuggestionView = null;
         mHomepageView = findViewById(R.id.settings_homepage_container);
-        // Hide the homepage for preparing the suggestion. If scrolling is needed, the list views
-        // should be initialized in the invisible homepage view to prevent a scroll flicker.
-        mHomepageView.setVisibility(scrollNeeded ? View.INVISIBLE : View.GONE);
-        // Schedule a timer to show the homepage and hide the suggestion on timeout.
-        mHomepageView.postDelayed(() -> showHomepageWithSuggestion(false),
-                HOMEPAGE_LOADING_TIMEOUT_MS);
-        if (homepageRevamp()) {
-            showFragment(new SuggestionFragCreator(fragmentClass, true),
-                    R.id.suggestion_content);
-        } else {
-            showFragment(new SuggestionFragCreator(fragmentClass, /* isTwoPaneLayout= */ false),
-                    R.id.suggestion_content);
-            if (mIsEmbeddingActivityEnabled) {
-                showFragment(new SuggestionFragCreator(fragmentClass, /* isTwoPaneLayout= */ true),
-                        R.id.two_pane_suggestion_content);
-            }
-        }
+            mHomepageView.setVisibility(View.VISIBLE);
     }
 
     private <T extends Fragment> T showFragment(FragmentCreator<T> fragmentCreator, int id) {
@@ -828,11 +789,9 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         if (mIsTwoPane) {
             findViewById(R.id.homepage_app_bar_regular_phone_view).setVisibility(View.GONE);
             findViewById(R.id.homepage_app_bar_two_pane_view).setVisibility(View.VISIBLE);
-            findViewById(R.id.suggestion_container_two_pane).setVisibility(View.VISIBLE);
         } else {
             findViewById(R.id.homepage_app_bar_regular_phone_view).setVisibility(View.VISIBLE);
             findViewById(R.id.homepage_app_bar_two_pane_view).setVisibility(View.GONE);
-            findViewById(R.id.suggestion_container_two_pane).setVisibility(View.GONE);
         }
     }
 
