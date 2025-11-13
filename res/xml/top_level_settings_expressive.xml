@@ -150,7 +150,7 @@
 
         <com.android.settings.widget.HomepagePreference
             android:fragment="com.android.settings.deviceinfo.StorageDashboardFragment"
-            android:icon="@drawable/ic_storage_filled"
+            android:icon="@drawable/ic_homepage_storage"
             android:key="top_level_storage"
             android:order="-50"
             android:title="@string/storage_settings"
