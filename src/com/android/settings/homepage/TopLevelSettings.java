@@ -103,8 +103,6 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
            case 0:
                return R.xml.top_level_settings_v2;
            case 1:
-               return R.xml.top_level_settings;
-           case 2:
                 return R.xml.top_level_settings_expressive;
            default:
                return R.xml.top_level_settings_v2;
