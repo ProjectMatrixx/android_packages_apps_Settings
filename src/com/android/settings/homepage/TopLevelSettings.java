@@ -231,6 +231,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
         super.onCreatePreferences(savedInstanceState, rootKey);
+            HideGmsBackupPref();
         if (Flags.homepageRevamp()) {
             iteratePreferences(preference -> {
                 if (Flags.homepageRevamp()) {
@@ -248,6 +249,17 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             Drawable icon = preference.getIcon();
             if (icon != null) {
                 icon.setTint(tintColor);
+            }
+        });
+    }
+
+    private void HideGmsBackupPref() {
+        iteratePreferences(preference  -> {
+            String prefKey = preference.getKey();
+            if (prefKey == null) return;
+            if (prefKey.equals("dashboard_tile_pref_com.google.android.gms.backup.component.BackupOrRestoreSettingsActivity")
+    	            || prefKey.equals("backup_or_restore_settings_keyhint")) {
+               preference.setVisible(false);
             }
         });
     }
