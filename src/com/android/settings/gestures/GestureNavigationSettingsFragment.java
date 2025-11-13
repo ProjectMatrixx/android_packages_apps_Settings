@@ -27,6 +27,8 @@ import android.os.UserHandle;
 import android.provider.Settings;
 import android.view.WindowManager;
 
+import com.android.internal.util.crdroid.Utils;
+
 import androidx.preference.ListPreference;
 import androidx.preference.Preference;
 import androidx.preference.SwitchPreferenceCompat;
@@ -37,6 +39,8 @@ import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
 import com.android.settingslib.widget.ButtonPreference;
 import com.android.settingslib.widget.SliderPreference;
+
+import lineageos.preference.LineageSystemSettingSwitchPreference;
 
 import com.crdroid.settings.utils.SystemUtils;
 
@@ -57,6 +61,7 @@ public class GestureNavigationSettingsFragment extends DashboardFragment impleme
             "com.android.settings.GESTURE_NAVIGATION_SETTINGS";
     static final String ACTION_GESTURE_SANDBOX = "com.android.quickstep.action.GESTURE_SANDBOX";
 
+    private static final String GESTURE_HINT_KEY = "navigation_bar_hint";
     private static final String LEFT_EDGE_SEEKBAR_KEY = "gesture_left_back_sensitivity";
     private static final String RIGHT_EDGE_SEEKBAR_KEY = "gesture_right_back_sensitivity";
     private static final String GESTURE_TUTORIAL_KEY = "assistant_gesture_navigation_tutorial";
@@ -66,6 +71,9 @@ public class GestureNavigationSettingsFragment extends DashboardFragment impleme
     private static final String KEY_CORNER_LONG_SWIPE = "navigation_bar_corner_long_swipe";
     private static final String KEY_EDGE_LONG_SWIPE = "navigation_bar_edge_long_swipe";
     private static final String KEY_ENABLE_TASKBAR = "enable_taskbar";
+
+    private static final String NEXUSLAUNCHER_PACKAGE_NAME = "com.google.android.apps.nexuslauncher";
+    private static final String NOGESTUREHINT_OVERLAY = "com.google.android.apps.nexuslauncher.overlay.nogesturehint";
 
     final Intent mLaunchTutorialIntent =  new Intent(ACTION_GESTURE_SANDBOX)
             .setFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
@@ -133,6 +141,19 @@ public class GestureNavigationSettingsFragment extends DashboardFragment impleme
         // Taskbar
         mEnableTaskbar = (SwitchPreferenceCompat) getPreferenceScreen().findPreference(KEY_ENABLE_TASKBAR);
         mEnableTaskbar.setOnPreferenceChangeListener(this);
+
+	//Support hiding gesture hint in NexusLauncher
+        LineageSystemSettingSwitchPreference gestureHintPref =
+                getPreferenceScreen().findPreference(GESTURE_HINT_KEY);
+
+        gestureHintPref.setOnPreferenceChangeListener((preference, newValue) -> {
+            if (Utils.isPackageInstalled(getContext(), NEXUSLAUNCHER_PACKAGE_NAME)) {
+                Utils.toggleOverlay(getContext(), NOGESTUREHINT_OVERLAY, !(Boolean) newValue);
+                Utils.restartApp(NEXUSLAUNCHER_PACKAGE_NAME, getContext());
+            }
+
+            return true;
+        });
     }
 
     @Override
