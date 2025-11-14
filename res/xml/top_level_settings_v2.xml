@@ -178,7 +178,7 @@
 
     <PreferenceCategory
         android:order="-105"
-        android:key="top_level_account_category"
+        android:key="top_level_system_category"
         android:layout="@layout/settingslib_preference_category_no_title">
     
         <com.android.settings.widget.HomepagePreference
@@ -237,6 +237,13 @@
             android:summary="@string/accessibility_settings_summary"
             settings:highlightableMenuKey="@string/menu_key_accessibility"
             settings:controller="com.android.settings.accessibility.TopLevelAccessibilityPreferenceController"/>
+    
+   	 <com.android.settings.widget.HomepagePreference
+	     android:key="top_level_services"
+	     android:title="@string/google_settings_title"
+	     android:summary="@string/google_settings_summary"
+	     android:icon="@drawable/ic_settings_google"
+	     settings:controller="com.android.settings.custom.GoogleSettingsPreferenceController" />
     </PreferenceCategory>
 
     <PreferenceCategory

@@ -11,4 +11,7 @@
 
    <string name="backup_title">Back up or copy data</string>
    <string name="backup_summary">Back up data, bring data from another device</string>
+
+   <string name="google_settings_title">Google settings</string>
+   <string name="google_settings_summary">Manage your Google account and services</string>
 </resources>
