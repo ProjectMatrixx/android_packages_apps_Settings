@@ -337,7 +337,7 @@ public class SettingsHomepageActivity extends FragmentActivity implements
     
     private int getSearchBarStyle() {
         int searchBarStyle = android.provider.Settings.System.getInt(
-            getApplicationContext().getContentResolver(), "search_bar_style", 0);
+            getApplicationContext().getContentResolver(), "search_bar_style", 1);
         return searchBarStyle;
     }
 
