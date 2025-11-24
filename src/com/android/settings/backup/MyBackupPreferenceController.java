@@ -14,11 +14,20 @@ public class MyBackupPreferenceController extends BasePreferenceController {
     public int getAvailabilityStatus() {
       try {
         mContext.getPackageManager().getPackageInfo("com.google.android.gms", 0);
-        return AVAILABLE;
+
+        boolean keyHintExists = getPreferenceScreen() != null
+                && getPreferenceScreen().findPreference("backup_or_restore_settings_keyhint") != null;
+
+        if (keyHintExists) {
+    	   return AVAILABLE;
+	}
+
     } catch (Exception e) {
         return UNSUPPORTED_ON_DEVICE;
     }
-    }
+
+    return UNSUPPORTED_ON_DEVICE;
+  }
 
     @Override
     public boolean handlePreferenceTreeClick(androidx.preference.Preference pref) {
