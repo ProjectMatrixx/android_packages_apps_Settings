@@ -14,64 +14,64 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
-<com.google.android.material.card.MaterialCardView
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/SearchBarStyle_v2"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-
-<androidx.constraintlayout.widget.ConstraintLayout
-    android:id="@+id/search_action_bar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:minHeight="72dp"
-    android:paddingStart="24dp"
-    android:paddingEnd="24dp"
-    android:gravity="center_vertical"
-    android:focusedByDefault="true"
-    android:background="@drawable/search_bar_selected_background_v2">
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
 
-    <!-- Search Icon -->
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_homepage_search"
-        android:tint="@color/top_level_preference_text_color_primary"
-        android:importantForAccessibility="no"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+    <!-- SEARCH BAR -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/search_bar_container"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_weight="1"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="4dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="0dp"
+        android:backgroundTint="@*android:color/system_neutral1_800">
 
-    <!-- Search Text -->
-    <TextView
-        android:id="@+id/search_bar_title"
-        style="@style/TextAppearance.SearchBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:paddingEnd="8dp"
-        android:text="@string/search_settings"
-        android:textColor="@color/top_level_preference_text_color_primary"
-        app:layout_constraintStart_toEndOf="@id/imageView"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/account_avatar"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/search_action_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:gravity="center_vertical">
 
-    <!-- Avatar aligned to end -->
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_homepage_search"
+                android:tint="@color/top_level_preference_text_color_primary"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/search_bar_title"
+                style="@style/TextAppearance.SearchBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/search_settings"
+                android:textColor="@color/top_level_preference_text_color_primary"
+                app:layout_constraintStart_toEndOf="@id/search_icon"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- AVATAR -->
     <ImageView
         android:id="@+id/account_avatar"
         android:layout_width="@dimen/custom_avatar_length"
         android:layout_height="@dimen/custom_avatar_length"
-        android:layout_marginStart="8dp"
-    	android:layout_marginEnd="-16dp"
-        android:visibility="invisible"
-        android:contentDescription="@string/search_bar_account_avatar_content_description"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
-</com.google.android.material.card.MaterialCardView>
+        android:layout_marginStart="4dp"
+        android:contentDescription="@string/search_bar_account_avatar_content_description"/>
+</LinearLayout>
