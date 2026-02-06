@@ -25,6 +25,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.graphics.ColorUtils
+import androidx.compose.animation.Crossfade
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.Image
@@ -37,6 +38,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Wifi
 import androidx.compose.material.icons.filled.Bluetooth
@@ -46,6 +48,8 @@ import androidx.compose.material.icons.filled.Adb
 import androidx.compose.material.icons.filled.AirplanemodeActive
 import androidx.compose.material.icons.filled.NotificationsActive
 import androidx.compose.material.icons.filled.Brightness4
+import androidx.compose.material.icons.rounded.Check
+import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -152,6 +156,26 @@ class BlurSettings : Fragment() {
                                 onCheckedChange = { newValue ->
                                     blursEnabled = newValue
                                     Settings.Global.putInt(cr, Settings.Global.DISABLE_WINDOW_BLURS, if (blursEnabled) 0 else 1)
+                                },
+                                thumbContent = {
+                                    Crossfade(
+                                        targetState = blursEnabled,
+                                        label = "switch_icon"
+                                    ) { isChecked ->
+                                        if (isChecked) {
+                                            Icon(
+                                                imageVector = Icons.Rounded.Check,
+                                                contentDescription = null,
+                                                modifier = Modifier.size(16.dp)
+                                            )
+                                        } else {
+                                            Icon(
+                                                imageVector = Icons.Rounded.Close,
+                                                contentDescription = null,
+                                                modifier = Modifier.size(16.dp)
+                                            )
+                                        }
+                                    }
                                 }
                             )
                         }
@@ -204,6 +228,46 @@ class BlurSettings : Fragment() {
                         }
                     }
                 }
+
+                item {
+                    Card(
+                        modifier = Modifier.fillMaxWidth(),
+                        colors = CardDefaults.cardColors(
+                            containerColor = MaterialTheme.colorScheme.surfaceContainerHighest
+                        ),
+                        shape = RoundedCornerShape(28.dp)
+                    ) {
+                        Column(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = 20.dp, vertical = 16.dp),
+                            verticalArrangement = Arrangement.spacedBy(8.dp)
+                        ) {
+                            Row(
+                                verticalAlignment = Alignment.CenterVertically,
+                                horizontalArrangement = Arrangement.spacedBy(8.dp)
+                            ) {
+                                Icon(
+                                    imageVector = Icons.Filled.Info,
+                                    contentDescription = null,
+                                    tint = MaterialTheme.colorScheme.primary,
+                                    modifier = Modifier.size(20.dp)
+                                )
+                                Text(
+                                    text = "Note",
+                                    style = MaterialTheme.typography.titleSmall,
+                                    fontWeight = FontWeight.SemiBold,
+                                    color = MaterialTheme.colorScheme.onSurface
+                                )
+                            }
+                            Text(
+                                text = "Restart SystemUI to reflect proper changes",
+                                style = MaterialTheme.typography.bodyMedium,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                            )
+                        }
+                    }
+                }
             }
         }
     }
@@ -220,7 +284,7 @@ class BlurSettings : Fragment() {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(340.dp)
+                .wrapContentHeight()
                 .padding(vertical = 12.dp)
                 .clip(RoundedCornerShape(32.dp))
                 .background(MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f))
@@ -231,6 +295,7 @@ class BlurSettings : Fragment() {
                 modifier = Modifier
                     .width(160.dp)
                     .height(280.dp)
+                    .padding(vertical = 16.dp)
                     .clip(RoundedCornerShape(32.dp))
                     .border(4.dp, Color.Black.copy(alpha = 0.9f), RoundedCornerShape(32.dp))
                     .background(Color.Black)
