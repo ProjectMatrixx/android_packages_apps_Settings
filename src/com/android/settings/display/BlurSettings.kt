@@ -48,6 +48,7 @@ import androidx.compose.material.icons.filled.Adb
 import androidx.compose.material.icons.filled.AirplanemodeActive
 import androidx.compose.material.icons.filled.NotificationsActive
 import androidx.compose.material.icons.filled.Brightness4
+import androidx.compose.material.icons.filled.RestartAlt
 import androidx.compose.material.icons.rounded.Check
 import androidx.compose.material.icons.rounded.Close
 import androidx.compose.material3.*
@@ -82,6 +83,11 @@ import kotlin.math.roundToInt
 
 class BlurSettings : Fragment() {
 
+    companion object {
+        const val DEFAULT_BLUR_RADIUS = 34f
+        const val MAX_BLUR_RADIUS = 100f
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -113,7 +119,7 @@ class BlurSettings : Fragment() {
         }
         
         var blurRadius by remember {
-            mutableStateOf(Settings.Secure.getFloat(cr, "system_blur_radius", 34f))
+            mutableStateOf(Settings.Secure.getFloat(cr, "system_blur_radius", DEFAULT_BLUR_RADIUS))
         }
 
         Scaffold(
@@ -206,12 +212,32 @@ class BlurSettings : Fragment() {
                                     style = MaterialTheme.typography.bodyLarge,
                                     color = if (blursEnabled) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f)
                                 )
-                                Text(
-                                    text = "${(blurRadius / 34f * 100).roundToInt()}%",
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    color = if (blursEnabled) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f),
-                                    fontWeight = FontWeight.Medium
-                                )
+                                Row(
+                                    horizontalArrangement = Arrangement.spacedBy(8.dp),
+                                    verticalAlignment = Alignment.CenterVertically
+                                ) {
+                                    Text(
+                                        text = "${(blurRadius / MAX_BLUR_RADIUS * 100).roundToInt()}%",
+                                        style = MaterialTheme.typography.bodyMedium,
+                                        color = if (blursEnabled) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f),
+                                        fontWeight = FontWeight.Medium
+                                    )
+                                    IconButton(
+                                        onClick = {
+                                            blurRadius = DEFAULT_BLUR_RADIUS
+                                            Settings.Secure.putFloat(cr, "system_blur_radius", DEFAULT_BLUR_RADIUS)
+                                        },
+                                        enabled = blursEnabled,
+                                        modifier = Modifier.size(32.dp)
+                                    ) {
+                                        Icon(
+                                            imageVector = Icons.Filled.RestartAlt,
+                                            contentDescription = "Reset to default",
+                                            tint = if (blursEnabled) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurface.copy(alpha = 0.38f),
+                                            modifier = Modifier.size(20.dp)
+                                        )
+                                    }
+                                }
                             }
                             Slider(
                                 value = blurRadius,
@@ -221,7 +247,7 @@ class BlurSettings : Fragment() {
                                 onValueChangeFinished = {
                                     Settings.Secure.putFloat(cr, "system_blur_radius", blurRadius)
                                 },
-                                valueRange = 0f..34f,
+                                valueRange = 0f..MAX_BLUR_RADIUS,
                                 enabled = blursEnabled,
                                 modifier = Modifier.fillMaxWidth()
                             )
@@ -281,6 +307,8 @@ class BlurSettings : Fragment() {
         val compositeColor = ColorUtils.compositeColors(layerFg.toArgb(), layerBg.toArgb())
         val shadeColor = Color(compositeColor)
 
+        val visualBlurRadius = (radius * 0.5f).coerceAtMost(35f)
+
         Box(
             modifier = Modifier
                 .fillMaxWidth()
@@ -315,7 +343,7 @@ class BlurSettings : Fragment() {
                         WallpaperImage(
                             modifier = Modifier
                                 .fillMaxSize()
-                                .blur(radius.dp)
+                                .blur(visualBlurRadius.dp)
                         )
 
                         Box(

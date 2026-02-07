@@ -27,6 +27,10 @@ class BlurSettingsPreferenceController(
     preferenceKey: String
 ) : BasePreferenceController(context, preferenceKey) {
 
+    companion object {
+        const val MAX_BLUR_RADIUS = 100f
+    }
+
     override fun getAvailabilityStatus(): Int {
         return if (CROSS_WINDOW_BLUR_SUPPORTED) AVAILABLE else UNSUPPORTED_ON_DEVICE
     }
@@ -45,7 +49,7 @@ class BlurSettingsPreferenceController(
                 "system_blur_radius",
                 34f
             )
-            val percent = (radius / 34f * 100).roundToInt()
+            val percent = (radius / MAX_BLUR_RADIUS * 100).roundToInt()
             return "On ($percent%)"
         }
         return "Off"
