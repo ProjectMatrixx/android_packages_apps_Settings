@@ -77,23 +77,7 @@ class SystemNavigationGestureScreen :
             else -> context.getText(R.string.legacy_navigation_title)
         }
 
-    fun Context.isGestureAvailable(): Boolean {
-        // Skip if the swipe up settings are not available
-        if (!resources.getBoolean(InternalR.bool.config_swipe_up_gesture_setting_available)) {
-            return false
-        }
-
-        // Skip if the recents component is not defined
-        val recentsComponentName =
-            ComponentName.unflattenFromString(
-                getString(InternalR.string.config_recentsComponentName)
-            ) ?: return false
-
-        // Skip if the overview proxy service exists
-        val quickStepIntent = Intent(ACTION_QUICKSTEP).setPackage(recentsComponentName.packageName)
-        return packageManager.resolveService(quickStepIntent, PackageManager.MATCH_SYSTEM_ONLY) !=
-            null
-    }
+    fun Context.isGestureAvailable(): Boolean = true
 
     fun Context.isGestureNavigationEnabled(): Boolean =
         NAV_BAR_MODE_GESTURAL ==
