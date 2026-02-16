@@ -210,8 +210,6 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
 
         if (!isCatalystEnabled()) {
             mSSIDPreferenceController = use(WifiTetherSSIDPreferenceController.class);
-            mWifiTetherAutoOffPreferenceController =
-                    use(WifiTetherAutoOffPreferenceController.class);
         }
         mSecurityPreferenceController = use(WifiTetherSecurityPreferenceController.class);
         mPasswordPreferenceController = use(WifiTetherPasswordPreferenceController.class);
@@ -219,6 +217,7 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
                 use(WifiTetherMaximizeCompatibilityPreferenceController.class);
         mClientPrefController = use(WifiTetherClientManagerPreferenceController.class);
         mHiddenSsidPrefController = use(WifiTetherHiddenSsidPreferenceController.class);
+        mWifiTetherAutoOffPreferenceController = use(WifiTetherAutoOffPreferenceController.class);
     }
 
     @Override
@@ -343,8 +342,6 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
         SoftApConfiguration.Builder configBuilder = new SoftApConfiguration.Builder(currentConfig);
         if (!isCatalystEnabled()) {
             configBuilder.setSsid(mSSIDPreferenceController.getSSID());
-            configBuilder.setAutoShutdownEnabled(
-                    mWifiTetherAutoOffPreferenceController.isEnabled());
         }
         int securityType =
                 mWifiTetherViewModel.isSpeedFeatureAvailable()
@@ -360,6 +357,8 @@ public class WifiTetherSettings extends RestrictedDashboardFragment
         }
         mClientPrefController.updateConfig(configBuilder);
         configBuilder.setHiddenSsid(mHiddenSsidPrefController.isHiddenSsidEnabled());
+        configBuilder.setAutoShutdownEnabled(
+                mWifiTetherAutoOffPreferenceController.isEnabled());
         return configBuilder.build();
     }
 
