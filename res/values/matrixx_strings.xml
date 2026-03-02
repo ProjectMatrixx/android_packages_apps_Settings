@@ -344,4 +344,8 @@
     <string name="cycle_type_weekly_sub">Day of each week:\n1 = Monday</string>
     <string name="cycle_type_daily_title">Usage cycle reset hour</string>
     <string name="cycle_type_daily_sub">Hour of each day:</string>
+
+    <!-- Smart 5G -->
+    <string name="smart_5g_title">Smart 5G</string>
+    <string name="smart_5g_summary">Automatically switch between 5G and 4G to reduce battery consumption</string>
 </resources>
