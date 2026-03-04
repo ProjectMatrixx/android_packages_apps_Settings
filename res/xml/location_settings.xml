@@ -52,6 +52,10 @@
 
     <com.android.settingslib.widget.UntitledPreferenceCategory
         android:key="location_advanced_settings">
+        <Preference
+            android:key="mock_location_app"
+            android:title="@string/mock_location_app"
+            settings:controller="com.android.settings.location.MockLocationAppPreferenceController"/>
 
         <SwitchPreferenceCompat
             android:key="override_mock_location"
