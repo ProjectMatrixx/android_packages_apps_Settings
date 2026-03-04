@@ -284,7 +284,7 @@
     <string name="hide_screen_capture_status_summary">Hide screen capture and screen record status from all applications. Can be convenient in some cases but may lead to privacy leaks.</string>
 
     <!-- Override Mock Location restriction -->
-    <string name="override_mock_location_title">Override MockLocation restriction</string>
+    <string name="override_mock_location_title">Override mock location restriction</string>
     <string name="override_mock_location_summary">When enabled, apps cannot detect mock locations</string>
 
     <!-- WiFi Hotspot -->
