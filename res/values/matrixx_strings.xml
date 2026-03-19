@@ -12,6 +12,11 @@
     <string name="platform_revision">Platform</string>
     <string name="total_ram">Total RAM</string>
 
+     <!-- Display settings screen, setting option to toggle sleep on face down -->
+    <string name="face_down_sleep_title">Face down detection</string>
+    <!-- Display settings screen, setting option summary to toggle sleep on face down -->
+    <string name="face_down_sleep_summary">Turn off screen after a short period when device is flipped over</string>
+     
     <!-- Deep Sleep percentage in device info -->
     <string name="status_sleep_time">Deep sleep</string>
 
