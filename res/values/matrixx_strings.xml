@@ -493,4 +493,8 @@
     <string name="backup_copy_data_summary">Back up data, restore, and transfer</string>
     <string name="wellbeing_title">Digital wellbeing</string>
     <string name="wellbeing_summary">Digital wellbeing and parental controls</string>
+
+    <!-- Notification bubbles -->
+    <string name="notification_bubble_apps_title">Bubble Notifications</string>
+    <string name="notification_bubble_apps_summary">Launch apps in a bubble when clicking their notifications</string>
 </resources>
