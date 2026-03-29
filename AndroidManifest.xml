@@ -6302,5 +6302,101 @@
                 <category android:name="android.intent.category.DEFAULT"/>
             </intent-filter>
         </activity>
+
+        <!-- Martrixx lab -->
+       <activity android:name="Settings$MatrixxLabActivity"
+            android:label="@string/matrixx_lab_title"
+            android:exported="true"
+            android:icon="@drawable/ic_homepage_matrixx">
+            <intent-filter>
+                <action android:name="com.android.settings.action.SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                android:value="com.matrixx.settings.MatrixxLabSettings" />
+            <meta-data android:name="com.android.settings.PRIMARY_PROFILE_CONTROLLED"
+                android:value="true" />
+        </activity>
+
+        <!-- Ui Settings -->
+        <activity android:name="Settings$MatrixxUserInterfaceActivity"
+                  android:label="@string/ui_options_title"
+                  android:icon="@drawable/ic_lock_outline"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.matrixx.settings.fragments.ui.UserInterface" />
+        </activity>
+
+        <!-- Qs Settings -->
+        <activity android:name="Settings$MatrixxQuickSettingsActivity"
+                  android:label="@string/qs_panel_options_title"
+                  android:icon="@drawable/ic_toolbox_24"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.matrixx.settings.fragments.quicksettings.QuickSettings" />
+        </activity>
+
+        <!-- statusBar Settings -->
+        <activity android:name="Settings$MatrixxStatusBarActivity"
+                  android:label="@string/statusbar_options_title"
+                  android:icon="@drawable/ic_palette_24"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.matrixx.settings.fragments.statusbar.StatusBar" />
+        </activity>
+
+        <!-- LockScreen Settings -->
+        <activity android:name="Settings$MatrixxLockscreenActivity"
+                  android:label="@string/lockscreen_options_title"
+                  android:icon="@drawable/ic_palette_24"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.matrixx.settings.fragments.lockscreen.LockScreen" />
+        </activity>
+
+        <!-- Misc Settings -->
+        <activity android:name="Settings$MatrixxMiscellaneousActivity"
+                  android:label="@string/misc_options_title"
+                  android:icon="@drawable/ic_spoofing"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.matrixx.settings.fragments.misc.Miscellaneous" />
+        </activity>
+
+        <!-- Sound Settings -->
+        <activity android:name="Settings$MatrixxSoundActivity"
+                  android:label="@string/sound_options_title"
+                  android:icon="@drawable/ic_spoofing"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.matrixx.settings.fragments.sound.Sound" />
+        </activity>
+
+        <!-- Notification Settings -->
+        <activity android:name="Settings$MatrixxNotificationsActivity"
+                  android:label="@string/notifications_options_title"
+                  android:icon="@drawable/ic_spoofing"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.matrixx.settings.fragments.notifications.Notifications" />
+        </activity>
+        <!-- Button Settings -->
+
+        <activity android:name="Settings$MatrixxButtonsActivity"
+                  android:label="@string/button_options_title"
+                  android:icon="@drawable/ic_spoofing"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.matrixx.settings.fragments.buttons.Buttons" />
+        </activity>
+
+        <!-- About Settings -->
+        <activity android:name="Settings$MatrixxAboutActivity"
+                  android:label="@string/statusbar_options_title"
+                  android:icon="@drawable/ic_spoofing"
+                  android:exported="true">
+            <meta-data android:name="com.android.settings.FRAGMENT_CLASS"
+                       android:value="com.matrixx.settings.fragments.about.About" />
+        </activity>
     </application>
 </manifest>

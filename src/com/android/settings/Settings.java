@@ -663,4 +663,16 @@ public class Settings extends SettingsActivity {
 
     // SleepMode
     public static class SleepModeActivity extends SettingsActivity {}
+
+    public static class MatrixxLabActivity extends SettingsActivity {}
+
+    public static class MatrixxUserInterfaceActivity extends SettingsActivity {}
+    public static class MatrixxQuickSettingsActivity extends SettingsActivity {}
+    public static class MatrixxStatusBarActivity extends SettingsActivity {}
+    public static class MatrixxLockscreenActivity extends SettingsActivity {}
+    public static class MatrixxMiscellaneousActivity extends SettingsActivity {}
+    public static class MatrixxSoundActivity extends SettingsActivity {}
+    public static class MatrixxNotificationsActivity extends SettingsActivity {}
+    public static class MatrixxButtonsActivity extends SettingsActivity {}
+    public static class MatrixxAboutActivity extends SettingsActivity {}
 }

@@ -1,0 +1,2 @@
+# MatrixxSettings
+-keep class com.matrixx.settings.**

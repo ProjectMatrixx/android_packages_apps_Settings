@@ -16,6 +16,7 @@
 
 package com.android.settings.core.gateway;
 
+import com.matrixx.settings.MatrixxLabSettings;
 import com.android.settings.DisplaySettings;
 import com.android.settings.IccLockSettings;
 import com.android.settings.MainClear;
@@ -224,6 +225,15 @@ import com.android.settings.wifi.calling.WifiCallingSettings;
 import com.android.settings.wifi.details.WifiNetworkDetailsFragment;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2;
+import com.matrixx.settings.fragments.quicksettings.QuickSettings;
+import com.matrixx.settings.fragments.about.About;
+import com.matrixx.settings.fragments.sound.Sound;
+import com.matrixx.settings.fragments.notifications.Notifications;
+import com.matrixx.settings.fragments.ui.UserInterface;
+import com.matrixx.settings.fragments.lockscreen.LockScreen;
+import com.matrixx.settings.fragments.misc.Miscellaneous;
+import com.matrixx.settings.fragments.buttons.Buttons;
+import com.matrixx.settings.fragments.statusbar.StatusBar;
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
 
@@ -444,6 +454,16 @@ public class SettingsGateway {
             SmartPixels.class.getName(),
             PrivateDnsSettings.class.getName(),
             SleepMode.class.getName(),
+            MatrixxLabSettings.class.getName(),
+            UserInterface.class.getName(),
+            Notifications.class.getName(),
+            LockScreen.class.getName(),
+            Miscellaneous.class.getName(),
+            Buttons.class.getName(),
+            StatusBar.class.getName(),
+            Sound.class.getName(),
+            QuickSettings.class.getName(),
+            About.class.getName()
     };
 
     public static final String[] SETTINGS_FOR_RESTRICTED = {
@@ -495,6 +515,16 @@ public class SettingsGateway {
             Settings.DevRunningServicesActivity.class.getName(),
             Settings.SmartPixelsActivity.class.getName(),
             Settings.PrivateDnsSettingsActivity.class.getName(),
-            Settings.SleepModeActivity.class.getName()
+            Settings.SleepModeActivity.class.getName(),
+            Settings.MatrixxLabActivity.class.getName(),
+            Settings.MatrixxUserInterfaceActivity.class.getName(),
+            Settings.MatrixxQuickSettingsActivity.class.getName(),
+            Settings.MatrixxStatusBarActivity.class.getName(),
+            Settings.MatrixxLockscreenActivity.class.getName(),
+            Settings.MatrixxMiscellaneousActivity.class.getName(),
+            Settings.MatrixxSoundActivity.class.getName(),
+            Settings.MatrixxNotificationsActivity.class.getName(),
+            Settings.MatrixxButtonsActivity.class.getName(),
+            Settings.MatrixxAboutActivity.class.getName(),
     };
 }
