@@ -447,4 +447,8 @@
     <string name="idle_manager_clear_stats_button">Clear</string>
     <string name="idle_manager_sleep_mode_trigger_title">Trigger on Sleep Mode</string>
     <string name="idle_manager_sleep_mode_trigger_summary">Only enforce idle rules while Sleep Mode is active</string>
+
+    <!-- Navbar Auto-Hide -->
+    <string name="gesture_navbar_auto_hide_title">Auto-hide navigation hint</string>
+    <string name="gesture_navbar_auto_hide_summary">Automatically hide the navigation hint after a short period of inactivity</string>
 </resources>
