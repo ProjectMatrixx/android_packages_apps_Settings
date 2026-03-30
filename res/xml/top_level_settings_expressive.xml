@@ -54,15 +54,14 @@
     <com.android.settingslib.widget.UntitledPreferenceCategory
         android:order="-120"
         android:key="top_level_personalize_category">
-
         <com.android.settings.widget.HomepagePreference
-            android:fragment="com.matrixx.settings.MatrixxSettingsLayout"
-            android:icon="@drawable/ic_homepage_matrixx"
-            android:key="top_level_matrixx"
+            android:fragment="com.android.settings.applications.AppDashboardFragment"
+            android:icon="@drawable/ic_homepage_apps"
+            android:key="top_level_apps"
             android:order="-60"
-            android:title="@string/matrixx_settings_title"
-            android:summary="@string/matrixx_settings_summary"
-            settings:controller="com.matrixx.settings.TopLevelSettingsPreferenceController"/>
+            android:title="@string/apps_dashboard_title"
+            android:summary="@string/app_and_notification_dashboard_summary"
+            settings:highlightableMenuKey="@string/menu_key_apps"/>
 
         <com.android.settings.widget.HomepagePreference
             android:fragment="com.android.settings.notification.ConfigureNotificationSettings"
@@ -126,16 +125,6 @@
         android:order="-110"
         android:key="top_level_system_info_category"
         android:layout="@layout/settingslib_expressive_untitled_preference_category">
-
-        <com.android.settings.widget.HomepagePreference
-            android:fragment="com.android.settings.applications.AppDashboardFragment"
-            android:icon="@drawable/ic_homepage_apps"
-            android:key="top_level_apps"
-            android:order="-60"
-            android:title="@string/apps_dashboard_title"
-            android:summary="@string/app_and_notification_dashboard_summary"
-            settings:highlightableMenuKey="@string/menu_key_apps"/>
-
         <com.android.settings.widget.HomepagePreference
             android:fragment="com.android.settings.deviceinfo.StorageDashboardFragment"
             android:icon="@drawable/ic_homepage_storage"
