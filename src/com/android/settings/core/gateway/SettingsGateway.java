@@ -226,7 +226,6 @@ import com.android.settings.wifi.p2p.WifiP2pSettings;
 import com.android.settings.wifi.savedaccesspoints2.SavedAccessPointsWifiSettings2;
 import com.android.settings.wifi.tether.WifiTetherSettings;
 
-import com.matrixx.settings.MatrixxSettingsLayout;
 
 import com.matrixx.settings.fragments.misc.SmartPixels;
 
@@ -441,7 +440,6 @@ public class SettingsGateway {
             SupervisionDashboardFragment.class.getName(),
             SummarizationPreferenceFragment.class.getName(),
             SafetyCenterFragment.class.getName(),
-            MatrixxSettingsLayout.class.getName(),
             RunningServices.class.getName(),
             SmartPixels.class.getName(),
             PrivateDnsSettings.class.getName(),
@@ -494,7 +492,6 @@ public class SettingsGateway {
             Settings.MemtagPageActivity.class.getName(),
             Settings.NavigationModeSettingsActivity.class.getName(),
             Settings.ShadeSettingsActivity.class.getName(),
-            Settings.MatrixxSettingsLayoutActivity.class.getName(),
             Settings.DevRunningServicesActivity.class.getName(),
             Settings.SmartPixelsActivity.class.getName(),
             Settings.PrivateDnsSettingsActivity.class.getName(),
