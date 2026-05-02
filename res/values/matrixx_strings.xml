@@ -472,4 +472,8 @@
     <string name="battery_saver_refresh_rate_title">Reduce refresh rate</string>
     <string name="battery_saver_refresh_rate_summary">Use 60 Hz screen refresh rate to save power when Battery Saver is on</string>
     <string name="battery_saver_refresh_rate_disabled_summary">Extreme refresh rate is on</string>
+
+    <!-- Per-app GPU composition -->
+    <string name="use_gpu_for_screen_composition_title">Use GPU for screen composition</string>
+    <string name="use_gpu_for_screen_composition_summary">Select apps that should disable HW overlays while in use</string>
 </resources>
