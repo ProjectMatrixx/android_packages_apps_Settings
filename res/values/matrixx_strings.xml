@@ -481,4 +481,12 @@
     <string name="backup_copy_data_summary">Back up data, restore, and transfer</string>
     <string name="wellbeing_title">Digital wellbeing</string>
     <string name="wellbeing_summary">Digital wellbeing and parental controls</string>
+
+    <!-- About Phone -->
+    <string name="matrixx_title">Matrixx Version</string>
+    <string name="mainatiner_title">Maintainer</string>
+    <string name="processor_title">Processor</string>
+    <string name="ram_title">Memory</string>
+    <string name="storage_title">Storage</string>
+    <string name="battery_title">Battery</string>
 </resources>

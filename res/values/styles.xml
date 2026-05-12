@@ -1192,4 +1192,13 @@
         <item name="android:clipChildren">true</item>
         <item name="android:clipToPadding">true</item>
     </style>
+
+    <style name="op_control_text_style_base">
+        <item name="android:breakStrategy">simple</item>
+    </style>
+    <style name="op_control_text_style_h6" parent="@style/op_control_text_style_base">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:elevation">0dp</item>
+    </style>
 </resources>

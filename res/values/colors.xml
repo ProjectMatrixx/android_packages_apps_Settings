@@ -301,4 +301,5 @@
 
    <color name="primary_text_disable_only_material_light">@*android:color/primary_text_disable_only_material_light</color>
 
+   <color name="user_crd_bg">#2A000000</color>
 </resources>
