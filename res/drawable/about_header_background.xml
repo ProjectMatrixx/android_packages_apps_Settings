@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:androidprv="http://schemas.android.com/apk/prv/res/android">
+    <solid android:color="@color/matrixx_card_background" />
+    <corners
+        android:topLeftRadius="@dimen/matrixx_card_radius"
+        android:topRightRadius="@dimen/matrixx_card_radius"
+        android:bottomLeftRadius="@dimen/matrixx_card_radius"
+        android:bottomRightRadius="@dimen/matrixx_card_radius" />
+</shape>

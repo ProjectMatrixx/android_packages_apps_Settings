@@ -1,0 +1,10 @@
+<!--
+     Copyright (C) 2026 ProjectMatrixx
+     SPDX-License-Identifier: Apache-2.0
+-->
+
+<com.android.settings.widget.TintDrawable
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/ic_ram"
+    android:tint="@color/homepage_blue_fg" />
+

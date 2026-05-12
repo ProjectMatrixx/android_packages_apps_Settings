@@ -7,6 +7,7 @@
 
     <!-- About Matrixx ROM -->
     <string name="about_device_name">Device</string>
+    <string name="maintainer_by">Built by: %1$s</string>
 
     <!-- Hardware info -->
     <string name="platform_revision">Platform</string>
@@ -497,4 +498,12 @@
     <!-- Notification bubbles -->
     <string name="notification_bubble_apps_title">Bubble Notifications</string>
     <string name="notification_bubble_apps_summary">Launch apps in a bubble when clicking their notifications</string>
+
+    <!-- About Phone -->
+    <string name="matrixx_title">Matrixx Version</string>
+    <string name="mainatiner_title">Maintainer</string>
+    <string name="processor_title">Processor</string>
+    <string name="ram_title">Memory</string>
+    <string name="storage_title">Storage</string>
+    <string name="battery_title">Battery</string>
 </resources>
