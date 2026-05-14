@@ -23,6 +23,7 @@ import android.app.ActivityManager;
 import android.app.settings.SettingsEnums;
 import android.content.Context;
 import android.content.res.Configuration;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.provider.SearchIndexableResource;
 import android.text.TextUtils;
@@ -211,6 +212,29 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
             outState.putParcelable(SAVED_HIGHLIGHT_MIXIN, mHighlightMixin);
         }
     }
+
+   @Override
+   public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+       super.onCreatePreferences(savedInstanceState, rootKey);
+
+       iteratePreferences(preference -> {
+           String prefKey = preference.getKey();
+
+           if (prefKey == null) {
+               return;
+           }
+
+           // Hide original injected Wellbeing tile
+           if ("top_level_wellbeing".equals(prefKey)) {
+               preference.setVisible(false);
+           }
+
+           // Hide original injected Backup tile
+           if ("backup_or_restore_settings_keyhint".equals(prefKey)) {
+               preference.setVisible(false);
+           }
+       });
+   }
 
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
