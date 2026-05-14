@@ -486,4 +486,9 @@
     <!-- Per-app GPU composition -->
     <string name="use_gpu_for_screen_composition_title">Use GPU for screen composition</string>
     <string name="use_gpu_for_screen_composition_summary">Select apps that should disable HW overlays while in use</string>
+
+    <string name="backup_copy_data_title">Back up or copy data</string>
+    <string name="backup_copy_data_summary">Back up data, restore, and transfer</string>
+    <string name="wellbeing_title">Digital wellbeing</string>
+    <string name="wellbeing_summary">Digital wellbeing and parental controls</string>
 </resources>

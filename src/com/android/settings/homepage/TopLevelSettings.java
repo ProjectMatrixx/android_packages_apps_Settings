@@ -21,8 +21,11 @@ import static com.android.settingslib.search.SearchIndexable.MOBILE;
 
 import android.app.ActivityManager;
 import android.app.settings.SettingsEnums;
+import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.content.Context;
 import android.content.res.Configuration;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.provider.SearchIndexableResource;
 import android.text.TextUtils;
@@ -210,6 +213,57 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
         if (mHighlightMixin != null) {
             outState.putParcelable(SAVED_HIGHLIGHT_MIXIN, mHighlightMixin);
         }
+    }
+
+    @Override
+    public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
+        super.onCreatePreferences(savedInstanceState, rootKey);
+
+        iteratePreferences(preference -> {
+            String prefKey = preference.getKey();
+
+            if (prefKey == null) {
+                return;
+            }
+
+            // Hide original injected wellbeing tile
+            if ("top_level_wellbeing".equals(prefKey)) {
+                preference.setVisible(false);
+            }
+
+            // Hide original injected backup tile
+            if ("backup_or_restore_settings_keyhint".equals(prefKey)) {
+                preference.setVisible(false);
+            }
+
+            // Hide custom wellbeing preference if app absent
+            if ("top_level_wb".equals(prefKey)) {
+
+                Intent wellbeingIntent = new Intent().setClassName(
+                        "com.google.android.apps.wellbeing",
+                        "com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity");
+
+                boolean available = wellbeingIntent.resolveActivity(
+                        getContext().getPackageManager()) != null;
+
+                preference.setVisible(available);
+
+            }
+
+            // Hide custom backup preference if activity absent
+            if ("top_level_backup".equals(prefKey)) {
+
+                Intent backupIntent = new Intent().setClassName(
+                        "com.google.android.gms",
+                        "com.google.android.gms.backup.component.BackupOrRestoreSettingsActivity");
+
+                boolean available = backupIntent.resolveActivity(
+                        getContext().getPackageManager()) != null;
+
+                preference.setVisible(available);
+
+            }
+        });
     }
 
     @Override

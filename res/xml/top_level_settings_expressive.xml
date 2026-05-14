@@ -147,6 +147,15 @@
             settings:controller="com.android.settings.deviceinfo.TopLevelStoragePreferenceController"/>
 
         <com.android.settings.widget.HomepagePreference
+            android:icon="@drawable/ic_homepage_backup"
+            android:key="top_level_backup"
+            android:order="-40"
+            android:title="@string/backup_copy_data_title"
+            android:summary="@string/backup_copy_data_summary"
+            settings:highlightableMenuKey="top_level_backup"
+            settings:controller="com.android.settings.homepage.BackupPreferenceController"/>
+
+        <com.android.settings.widget.HomepagePreference
             android:fragment="com.android.settings.fuelgauge.batteryusage.PowerUsageSummary"
             android:icon="@drawable/ic_homepage_battery"
             android:key="top_level_battery"
@@ -228,7 +237,16 @@
             android:summary="@string/summary_placeholder"
             settings:highlightableMenuKey="@string/menu_key_accounts"
             settings:controller="com.android.settings.accounts.TopLevelAccountEntryPreferenceController"/>
-
+ 
+        <com.android.settings.widget.HomepagePreference
+            android:icon="@drawable/ic_homepage_wellbeing"
+            android:key="top_level_wb"
+            android:order="0"
+            android:title="@string/wellbeing_title"
+            android:summary="@string/wellbeing_summary"
+            settings:highlightableMenuKey="top_level_wellbeing"
+            settings:controller="com.android.settings.homepage.WellbeingPreferenceController"/>
+        
         <com.android.settings.widget.HomepagePreference
             android:key="top_level_supervision"
             android:title="@string/supervision_settings_title"
