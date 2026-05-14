@@ -18,9 +18,9 @@
     android:height="24dp"
     android:viewportWidth="960"
     android:viewportHeight="960"
-    android:tint="?android:attr/colorControlNormal"
-    android:autoMirrored="true">
-    <path
-        android:fillColor="@android:color/white"
-        android:pathData="M560,829L560,747Q650,721 705,647Q760,573 760,479Q760,385 705,311Q650,237 560,211L560,129Q684,157 762,254.5Q840,352 840,479Q840,606 762,703.5Q684,801 560,829ZM120,600L120,360L280,360L480,160L480,800L280,600L120,600ZM560,640L560,318Q607,340 633.5,384Q660,428 660,480Q660,531 633.5,574.5Q607,618 560,640Z"/>
+    android:tint="?android:attr/colorControlNormal">
+  <path
+      android:pathData="M451.72,140L253.28,338.28L140,338.28L140,621.56L253.28,621.56L451.72,820L451.72,140zM765.63,140L616.02,289.61L711.25,384.77L616.02,480L711.25,575.23L616.02,670.39L765.63,820L820,765.63L724.77,670.39L820,575.23L724.77,480L820,384.77L724.77,289.61L820,194.38L765.63,140z"
+      android:strokeWidth="1.32812"
+      android:fillColor="@android:color/white"/>
 </vector>
