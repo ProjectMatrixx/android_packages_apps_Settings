@@ -4,10 +4,10 @@
         <shape xmlns:android="http://schemas.android.com/apk/res/android">
             <solid android:color="#FFFFFFFF"/>
             <corners
-                android:bottomRightRadius="0dp"
-                android:bottomLeftRadius="0dp"
-                android:topLeftRadius="0dp"
-                android:topRightRadius="0dp"/>
+                android:bottomRightRadius="5dp"
+                android:bottomLeftRadius="5dp"
+                android:topLeftRadius="5dp"
+                android:topRightRadius="5dp"/>
         </shape>
     </item>
     <item android:id="@android:id/background">
@@ -16,10 +16,10 @@
 
             <solid android:color="@color/user_crd_bg" />
             <corners
-                android:bottomRightRadius="0dp"
-                android:bottomLeftRadius="0dp"
-                android:topLeftRadius="0dp"
-                android:topRightRadius="0dp"/>
+                android:bottomRightRadius="5dp"
+                android:bottomLeftRadius="5dp"
+                android:topLeftRadius="5dp"
+                android:topRightRadius="5dp"/>
         </shape>
     </item>
 </ripple>
