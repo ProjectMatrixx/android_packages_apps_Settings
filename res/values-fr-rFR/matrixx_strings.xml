@@ -5,46 +5,46 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- About Matrixx ROM -->
-    <string name="about_device_name">Device</string>
+    <string name="about_device_name">Appareil</string>
     <!-- Hardware info -->
-    <string name="platform_revision">Platform</string>
-    <string name="total_ram">Total RAM</string>
+    <string name="platform_revision">Plateforme</string>
+    <string name="total_ram">RAM totale</string>
     <!-- Display settings screen, setting option to toggle sleep on face down -->
-    <string name="face_down_sleep_title">Face down detection</string>
+    <string name="face_down_sleep_title">Détection face vers le bas</string>
     <!-- Display settings screen, setting option summary to toggle sleep on face down -->
-    <string name="face_down_sleep_summary">Turn off screen after a short period when device is flipped over</string>
+    <string name="face_down_sleep_summary">Éteindre l\'écran après une courte période lorsque l\'appareil est retourné</string>
     <!-- Deep Sleep percentage in device info -->
-    <string name="status_sleep_time">Deep sleep</string>
+    <string name="status_sleep_time">Veille profonde</string>
     <!-- Wifi/Bluetooth auto timeout -->
-    <string name="wifi_timeout">WiFi timeout</string>
-    <string name="wifi_timeout_summary">Do not automatically turn off WiFi</string>
-    <string name="wifi_timeout_summary_auto">WiFi will turn off after <xliff:g id="timeout_description">%1$s</xliff:g> if no network connected</string>
-    <string name="bluetooth_timeout">Bluetooth timeout</string>
-    <string name="bluetooth_timeout_summary">Do not automatically turn off Bluetooth</string>
-    <string name="bluetooth_timeout_summary_auto">Bluetooth will turn off after <xliff:g id="timeout_description">%1$s</xliff:g> if no devices connected</string>
+    <string name="wifi_timeout">Délai de déconnexion WiFi/Bluetooth</string>
+    <string name="wifi_timeout_summary">Ne pas désactiver automatiquement le WiFi</string>
+    <string name="wifi_timeout_summary_auto">Le Wi-Fi sera désactivé après <xliff:g id="timeout_description">%1$s</xliff:g> si aucun réseau n\'est disponible</string>
+    <string name="bluetooth_timeout">Délai d\'attente Bluetooth</string>
+    <string name="bluetooth_timeout_summary">Ne pas désactiver automatiquement le Bluetooth</string>
+    <string name="bluetooth_timeout_summary_auto">Le Bluetooth sera désactivé après <xliff:g id="timeout_description">%1$s</xliff:g> si aucun appareil n\'est connecté</string>
     <!-- Custom Timeouts -->
-    <string name="custom_timeout_summary_never">Never</string>
-    <string name="custom_timeout_summary_5secs">5 seconds</string>
-    <string name="custom_timeout_summary_10secs">10 seconds</string>
-    <string name="custom_timeout_summary_15secs">15 seconds</string>
-    <string name="custom_timeout_summary_30secs">30 seconds</string>
+    <string name="custom_timeout_summary_never">Jamais</string>
+    <string name="custom_timeout_summary_5secs">5 secondes</string>
+    <string name="custom_timeout_summary_10secs">10 secondes</string>
+    <string name="custom_timeout_summary_15secs">15 secondes</string>
+    <string name="custom_timeout_summary_30secs">30 secondes</string>
     <string name="custom_timeout_summary_1min">1 minute</string>
-    <string name="custom_timeout_summary_2mins">2 minutes</string>
-    <string name="custom_timeout_summary_5mins">5 minutes</string>
-    <string name="custom_timeout_summary_10mins">10 minutes</string>
-    <string name="custom_timeout_summary_20mins">20 minutes</string>
-    <string name="custom_timeout_summary_30mins">30 minutes</string>
-    <string name="custom_timeout_summary_1hour">1 hour</string>
-    <string name="custom_timeout_summary_2hours">2 hours</string>
-    <string name="custom_timeout_summary_4hours">4 hours</string>
-    <string name="custom_timeout_summary_8hours">8 hours</string>
-    <string name="custom_timeout_summary_12hours">12 hours</string>
-    <string name="custom_timeout_summary_24hours">24 hours</string>
-    <string name="custom_timeout_summary_36hours">36 hours</string>
-    <string name="custom_timeout_summary_48hours">48 hours</string>
-    <string name="custom_timeout_summary_72hours">72 hours</string>
+    <string name="custom_timeout_summary_2mins">2 minutes</string>
+    <string name="custom_timeout_summary_5mins">5 minutes</string>
+    <string name="custom_timeout_summary_10mins">10 minutes</string>
+    <string name="custom_timeout_summary_20mins">20 minutes</string>
+    <string name="custom_timeout_summary_30mins">30 minutes</string>
+    <string name="custom_timeout_summary_1hour">1 heure</string>
+    <string name="custom_timeout_summary_2hours">2 heures</string>
+    <string name="custom_timeout_summary_4hours">4 heures</string>
+    <string name="custom_timeout_summary_8hours">8 heures</string>
+    <string name="custom_timeout_summary_12hours">12 heures</string>
+    <string name="custom_timeout_summary_24hours">24 heures</string>
+    <string name="custom_timeout_summary_36hours">36 heures</string>
+    <string name="custom_timeout_summary_48hours">48 heures</string>
+    <string name="custom_timeout_summary_72hours">72 heures</string>
     <!-- Default Timeouts -->
-    <string name="custom_timeout_summary_1hour_def">1 hour (Default)</string>
+    <string name="custom_timeout_summary_1hour_def">1 heure (par défaut)</string>
     <!-- Cloudflare Block Malware DNS Option -->
     <!-- Cloudflare Block Malware DNS hostname -->
     <!-- Cloudflare Block Malware and Adult Content DNS Option -->
@@ -64,94 +64,94 @@
     <!-- Quad9 Unsecured ECS DNS Option -->
     <!-- Quad9 Unsecured ECS DNS hostname -->
     <!-- Default getTimeSpentInApp string for Wellbeing to display. [CHAR LIMIT=NONE] -->
-    <string name="duration_less_than_one_minute">Less than 1 Minute</string>
+    <string name="duration_less_than_one_minute">Moins d\'une minute</string>
     <!-- Summary for Wellbeing screen time usage. [CHAR LIMIT=NONE] -->
-    <string name="screen_time_summary_usage_today">%1$s today</string>
+    <string name="screen_time_summary_usage_today">%1$s aujourd\'hui</string>
     <!-- Auto pin confirm -->
-    <string name="lock_screen_auto_pin_confirm_summary_custom">Unlock automatically if you input a correct PIN. This is slightly less secure than tapping Enter to confirm.</string>
+    <string name="lock_screen_auto_pin_confirm_summary_custom">Déverrouiller automatiquement si vous saisissez un code PIN correct. Ceci est légèrement moins sécurisé que d\'appuyer sur Entrée pour confirmer.</string>
     <!-- Gesture navbar length -->
-    <string name="gesture_navbar_length_title">Pill length</string>
-    <string name="short_label">Short</string>
-    <string name="long_label">Long</string>
+    <string name="gesture_navbar_length_title">Longueur de la barre de navigation</string>
+    <string name="short_label">Court</string>
+    <string name="long_label">Longue</string>
     <!-- Back gesture height -->
-    <string name="back_height_low_label">Full</string>
-    <string name="back_height_high_label">Bottom</string>
-    <string name="back_height_title">Back gesture height</string>
-    <string name="back_height_summary">Screen height valid for back gesture</string>
+    <string name="back_height_low_label">Plein</string>
+    <string name="back_height_high_label">Bas</string>
+    <string name="back_height_title">Hauteur du geste retour</string>
+    <string name="back_height_summary">Hauteur de l\'écran valide pour le geste retour</string>
     <!-- Back gesture animation -->
-    <string name="back_gesture_arrow_title">Back gesture animation</string>
-    <string name="back_gesture_arrow_summary">Show an animated arrow for back gesture</string>
+    <string name="back_gesture_arrow_title">Animation du geste de retour</string>
+    <string name="back_gesture_arrow_summary">Afficher une flèche animée pour le geste retour</string>
     <!-- Back gesture haptic -->
-    <string name="back_gesture_haptic_title">Back gesture haptic</string>
-    <string name="back_gesture_haptic_summary">Vibrate when performing a back gesture</string>
+    <string name="back_gesture_haptic_title">Retour haptique pour le geste retour</string>
+    <string name="back_gesture_haptic_summary">Vibrer lors d\'un geste retour</string>
     <!-- Gesture navbar radius -->
-    <string name="gesture_navbar_radius_title">Pill radius</string>
-    <string name="thin_label">Thin</string>
-    <string name="thick_label">Thick</string>
+    <string name="gesture_navbar_radius_title">Épaisseur de la barre de navigation par geste</string>
+    <string name="thin_label">Fin</string>
+    <string name="thick_label">Épais</string>
     <!-- Navigation Bar -->
-    <string name="navbar_visibility_title">Navigation bar</string>
-    <string name="navbar_visibility_summary">Display navigation bar at bottom of screen</string>
-    <string name="navbar_layout_category_title">Layout</string>
-    <string name="navbar_arrow_keys_title">Show arrow keys while typing</string>
-    <string name="navbar_arrow_keys_summary">Display left and right cursor buttons while typing. Overrides IME switcher.</string>
-    <string name="navbar_layout_title">Layout</string>
+    <string name="navbar_visibility_title">Barre de navigation</string>
+    <string name="navbar_visibility_summary">Afficher la barre de navigation en bas de l\'écran</string>
+    <string name="navbar_layout_category_title">Disposition</string>
+    <string name="navbar_arrow_keys_title">Afficher les flèches lors de la frappe</string>
+    <string name="navbar_arrow_keys_summary">Afficher les touches de curseur gauche et droite lors de la saisie. Remplace le changeur de mode de saisie.</string>
+    <string name="navbar_layout_title">Disposition</string>
     <string name="navbar_layout_normal">Normal</string>
-    <string name="navbar_layout_compact">Compact</string>
-    <string name="navbar_layout_expanded">Expanded</string>
-    <string name="navbar_layout_leftleaning">Left-leaning</string>
-    <string name="navbar_layout_rightleaning">Right-leaning</string>
-    <string name="navbar_invert_layout_title">Invert layout</string>
-    <string name="navbar_invert_layout_summary">Inverts the layout of the navigation bar and other items, such as the IME switcher</string>
+    <string name="navbar_layout_compact">Compacte</string>
+    <string name="navbar_layout_expanded">Étendu</string>
+    <string name="navbar_layout_leftleaning">Alignée à gauche</string>
+    <string name="navbar_layout_rightleaning">Alignée à droite</string>
+    <string name="navbar_invert_layout_title">Disposition inversée</string>
+    <string name="navbar_invert_layout_summary">Inverser la disposition de la barre de navigation ou d\'autres éléments, comme le sélecteur de claviers</string>
     <string name="navbar_actions_category_title">Actions</string>
-    <string name="navbar_back_long_press_title">Back long press</string>
-    <string name="navbar_back_double_tap_title">Back double tap</string>
-    <string name="navbar_home_long_press_title">Home long press</string>
-    <string name="navbar_home_double_tap_title">Home double tap</string>
-    <string name="navbar_app_switch_long_press_title">Recents long press</string>
-    <string name="navbar_app_switch_double_tap_title">Recents double tap</string>
-    <string name="navbar_edge_long_swipe_title">Edge long swipe</string>
-    <string name="navbar_corner_long_swipe_title">Bottom corner swipe up</string>
+    <string name="navbar_back_long_press_title">Appui long sur bouton Retour</string>
+    <string name="navbar_back_double_tap_title">Appui double sur le bouton retour</string>
+    <string name="navbar_home_long_press_title">Appui long sur bouton Accueil</string>
+    <string name="navbar_home_double_tap_title">Appui double sur bouton Accueil</string>
+    <string name="navbar_app_switch_long_press_title">Appui long sur bouton Applications récentes</string>
+    <string name="navbar_app_switch_double_tap_title">Appui double sur le bouton Applications récentes</string>
+    <string name="navbar_edge_long_swipe_title">Balayage long sur le bord</string>
+    <string name="navbar_corner_long_swipe_title">Glissement vers le haut depuis les coins inférieurs</string>
     <!-- Navigation bar taskbar -->
-    <string name="navigation_bar_enable_taskbar_title">Taskbar</string>
-    <string name="navigation_bar_enable_taskbar_summary">Show taskbar with selected navigation mode</string>
+    <string name="navigation_bar_enable_taskbar_title">Barre des tâches</string>
+    <string name="navigation_bar_enable_taskbar_summary">Afficher la barre des tâches avec le mode de navigation sélectionné</string>
     <!-- IME button space -->
-    <string name="show_ime_space_title">Show IME button space</string>
-    <string name="show_ime_space_summary">Enable the input method quick switch feature to switch input methods or hide the on-screen keyboard from the feature bar at the bottom of the screen when typing</string>
+    <string name="show_ime_space_title">Afficher le mode de saisie</string>
+    <string name="show_ime_space_summary">Activer la fonction de commutation rapide de la méthode de saisie pour changer de mode de saisie ou masquer le clavier à l\'écran de la barre de fonction en bas de l\'écran lors de la saisie</string>
     <!-- Heads up timeout -->
-    <string name="notification_heads_up_title">Heads up</string>
-    <string name="notification_heads_up_summary">Allow pop up notifications</string>
+    <string name="notification_heads_up_title">Notifications flottantes</string>
+    <string name="notification_heads_up_summary">Autoriser les notifications pop-up</string>
     <!-- Less boring heads up -->
-    <string name="less_boring_heads_up_title">Less boring</string>
-    <string name="less_boring_heads_up_summary">Display popup notifications only for alarm, dialer and messaging app</string>
+    <string name="less_boring_heads_up_title">Restriction des notifications flottantes</string>
+    <string name="less_boring_heads_up_summary">Afficher uniquement les notifications popup pour l\'alarme, le téléphone et la messagerie</string>
     <!-- Running services - Background processes tab -->
-    <string name="background_processes_settings_title">Background processes</string>
+    <string name="background_processes_settings_title">Processus en arrière-plan</string>
     <!-- Label for a numbered SIM card.  [CHAR LIMIT=40] -->
     <!-- Increasing ring tone volume -->
-    <string name="increasing_ring_volume_option_title">Increasing ring volume</string>
-    <string name="increasing_ring_min_volume_title">Start volume</string>
-    <string name="increasing_ring_ramp_up_time_title">Ramp-up time</string>
+    <string name="increasing_ring_volume_option_title">Sonnerie progressive</string>
+    <string name="increasing_ring_min_volume_title">Volume initial</string>
+    <string name="increasing_ring_ramp_up_time_title">Durée d\'augmentation</string>
     <!-- Vibration patterns -->
-    <string name="vibration_pattern_title">Ringtone vibration pattern</string>
-    <string name="pattern_custom">Custom</string>
-    <string name="custom_vibration_pattern_title">Custom pattern</string>
-    <string name="custom_vibration_pattern_summary">Set a custom vibration pattern</string>
+    <string name="vibration_pattern_title">Motif de vibration de la sonnerie</string>
+    <string name="pattern_custom">Personnalisé</string>
+    <string name="custom_vibration_pattern_title">Modèle personnalisé</string>
+    <string name="custom_vibration_pattern_summary">Définir un modèle de vibration personnalisé</string>
     <!-- Force LTE_CA -->
-    <string name="force_lte_ca_title">LTE carrier aggregation</string>
-    <string name="force_lte_ca_summary">Enhances LTE bandwidth by aggregating supported bands</string>
+    <string name="force_lte_ca_title">Agrégation de l\'opérateur LTE</string>
+    <string name="force_lte_ca_summary">Améliore la bande passante LTE en regroupant les bandes prises en charge</string>
     <!-- Force dark mode -->
-    <string name="force_dark_title">Dark mode for third-party apps</string>
-    <string name="force_dark_summary">Forces darker colors in apps lacking dark mode. Some screens may appear off.</string>
+    <string name="force_dark_title">Mode sombre pour les applications tierces</string>
+    <string name="force_dark_summary">Forcer les couleurs sombres pour les applis qui ne possèdent pas le mode sombre. L\'écran peut sembler éteint.</string>
     <!-- Wi-Fi MAC address randomization -->
-    <string name="wifi_per_connection_random_mac_addr">Use per-connection randomized MAC (default)</string>
-    <string name="wifi_per_network_random_mac_addr">Use per-network randomized MAC</string>
-    <string name="wifi_device_mac_addr">Use device MAC</string>
+    <string name="wifi_per_connection_random_mac_addr">MAC aléatoire par connexion (par défaut)</string>
+    <string name="wifi_per_network_random_mac_addr">MAC aléatoire par réseau</string>
+    <string name="wifi_device_mac_addr">Utiliser l\'adresse MAC de l\'appareil</string>
     <!-- Menu option for not validating the EAP server -->
-    <string name="wifi_do_not_validate_eap_server">Do not validate</string>
+    <string name="wifi_do_not_validate_eap_server">Ne pas valider</string>
     <!-- Warning message displayed if user choses not to validate the EAP server -->
-    <string name="wifi_do_not_validate_eap_server_warning">No certificate specified. Your connection will not be private.</string>
+    <string name="wifi_do_not_validate_eap_server_warning">Aucun certificat spécifié. Votre connexion ne sera pas privée.</string>
     <!-- HBM -->
-    <string name="auto_hbm_enabled_title">Auto High Brightness Mode</string>
-    <string name="auto_hbm_enabled_summary">Automatically enable high brightness mode in strong sunlight. Increases battery usage.</string>
+    <string name="auto_hbm_enabled_title">Mode haute luminosité automatique</string>
+    <string name="auto_hbm_enabled_summary">Activer automatiquement le mode haute luminosité dans une forte lumière. Augmente l\'utilisation de la batterie.</string>
     <string name="auto_hbm_lux_on_title">HBM Activation Threshold</string>
     <string name="auto_hbm_lux_on_summary">Ambient light level at which high brightness mode will turn on</string>
     <string name="auto_hbm_lux_off_title">HBM Deactivation Threshold</string>
