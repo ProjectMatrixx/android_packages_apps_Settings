@@ -152,7 +152,7 @@
     <!-- HBM -->
     <string name="auto_hbm_enabled_title">Mode haute luminosité automatique</string>
     <string name="auto_hbm_enabled_summary">Activer automatiquement le mode haute luminosité dans une forte lumière. Augmente l\'utilisation de la batterie.</string>
-    <string name="auto_hbm_lux_on_title">HBM Activation Threshold</string>
+    <string name="auto_hbm_lux_on_title">Seuil d\'activation HBM</string>
     <string name="auto_hbm_lux_on_summary">Ambient light level at which high brightness mode will turn on</string>
     <string name="auto_hbm_lux_off_title">HBM Deactivation Threshold</string>
     <string name="auto_hbm_lux_off_summary">Ambient light level below which high brightness mode will turn off</string>
