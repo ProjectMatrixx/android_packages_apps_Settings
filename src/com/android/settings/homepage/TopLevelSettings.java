@@ -226,42 +226,35 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                 return;
             }
 
-            // Hide original injected wellbeing tile
+            // Hide original wellbeing tile
             if ("top_level_wellbeing".equals(prefKey)) {
                 preference.setVisible(false);
             }
 
-            // Hide original injected backup tile
-            if ("backup_or_restore_settings_keyhint".equals(prefKey)) {
+            // Hide original backup tile
+            if ("dashboard_tile_pref_com.google.android.gms.backup.component.BackupOrRestoreSettingsActivity"
+                    .equals(prefKey)) {
                 preference.setVisible(false);
             }
 
-            // Hide custom wellbeing preference if app absent
+            // Custom wellbeing tile
             if ("top_level_wb".equals(prefKey)) {
-
-                Intent wellbeingIntent = new Intent().setClassName(
+                boolean available = new Intent().setClassName(
                         "com.google.android.apps.wellbeing",
-                        "com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity");
-
-                boolean available = wellbeingIntent.resolveActivity(
-                        getContext().getPackageManager()) != null;
+                        "com.google.android.apps.wellbeing.settings.TopLevelSettingsActivity")
+                        .resolveActivity(getContext().getPackageManager()) != null;
 
                 preference.setVisible(available);
-
             }
 
-            // Hide custom backup preference if activity absent
+            // Custom backup tile
             if ("top_level_backup".equals(prefKey)) {
-
-                Intent backupIntent = new Intent().setClassName(
+                boolean available = new Intent().setClassName(
                         "com.google.android.gms",
-                        "com.google.android.gms.backup.component.BackupOrRestoreSettingsActivity");
-
-                boolean available = backupIntent.resolveActivity(
-                        getContext().getPackageManager()) != null;
+                        "com.google.android.gms.backup.component.BackupOrRestoreSettingsActivity")
+                        .resolveActivity(getContext().getPackageManager()) != null;
 
                 preference.setVisible(available);
-
             }
         });
     }
