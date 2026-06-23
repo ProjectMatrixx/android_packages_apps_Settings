@@ -15,5 +15,5 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Paranoid Maintainer -->
-    <string name="Paranoid_maintainer">Built &amp; Maintained by</string>
+    <string name="Paranoid_maintainer">Yapı &amp; Tarafından Sağlandı</string>
 </resources>
