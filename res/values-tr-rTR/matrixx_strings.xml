@@ -5,46 +5,46 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- About Matrixx ROM -->
-    <string name="about_device_name">Device</string>
+    <string name="about_device_name">Cihaz</string>
     <!-- Hardware info -->
     <string name="platform_revision">Platform</string>
-    <string name="total_ram">Total RAM</string>
+    <string name="total_ram">Toplam RAM</string>
     <!-- Display settings screen, setting option to toggle sleep on face down -->
-    <string name="face_down_sleep_title">Face down detection</string>
+    <string name="face_down_sleep_title">Yüz üstü çevirme algılaması</string>
     <!-- Display settings screen, setting option summary to toggle sleep on face down -->
-    <string name="face_down_sleep_summary">Turn off screen after a short period when device is flipped over</string>
+    <string name="face_down_sleep_summary">Cihaz yüzüstü çevrildikten bir süre sonra ekranı kapat</string>
     <!-- Deep Sleep percentage in device info -->
-    <string name="status_sleep_time">Deep sleep</string>
+    <string name="status_sleep_time">Derin Uyku</string>
     <!-- Wifi/Bluetooth auto timeout -->
-    <string name="wifi_timeout">WiFi timeout</string>
-    <string name="wifi_timeout_summary">Do not automatically turn off WiFi</string>
-    <string name="wifi_timeout_summary_auto">WiFi will turn off after <xliff:g id="timeout_description">%1$s</xliff:g> if no network connected</string>
-    <string name="bluetooth_timeout">Bluetooth timeout</string>
-    <string name="bluetooth_timeout_summary">Do not automatically turn off Bluetooth</string>
-    <string name="bluetooth_timeout_summary_auto">Bluetooth will turn off after <xliff:g id="timeout_description">%1$s</xliff:g> if no devices connected</string>
+    <string name="wifi_timeout">WiFi zaman aşımı</string>
+    <string name="wifi_timeout_summary">WiFi\'yi otomatik olarak kapatma</string>
+    <string name="wifi_timeout_summary_auto">Bir ağa bağlı değilse WiFi <xliff:g id="timeout_description">%1$s</xliff:g> sonra kapanacak</string>
+    <string name="bluetooth_timeout">Bluetooth zaman aşımı</string>
+    <string name="bluetooth_timeout_summary">Bluetooth\'u otomatik olarak kapatma</string>
+    <string name="bluetooth_timeout_summary_auto">Hiçbir cihaz bağlı değilse <xliff:g id="timeout_description">%1$s</xliff:g> sonra Bluetooth kapanacak</string>
     <!-- Custom Timeouts -->
-    <string name="custom_timeout_summary_never">Never</string>
-    <string name="custom_timeout_summary_5secs">5 seconds</string>
-    <string name="custom_timeout_summary_10secs">10 seconds</string>
-    <string name="custom_timeout_summary_15secs">15 seconds</string>
-    <string name="custom_timeout_summary_30secs">30 seconds</string>
-    <string name="custom_timeout_summary_1min">1 minute</string>
-    <string name="custom_timeout_summary_2mins">2 minutes</string>
-    <string name="custom_timeout_summary_5mins">5 minutes</string>
-    <string name="custom_timeout_summary_10mins">10 minutes</string>
-    <string name="custom_timeout_summary_20mins">20 minutes</string>
-    <string name="custom_timeout_summary_30mins">30 minutes</string>
-    <string name="custom_timeout_summary_1hour">1 hour</string>
-    <string name="custom_timeout_summary_2hours">2 hours</string>
-    <string name="custom_timeout_summary_4hours">4 hours</string>
-    <string name="custom_timeout_summary_8hours">8 hours</string>
-    <string name="custom_timeout_summary_12hours">12 hours</string>
-    <string name="custom_timeout_summary_24hours">24 hours</string>
-    <string name="custom_timeout_summary_36hours">36 hours</string>
-    <string name="custom_timeout_summary_48hours">48 hours</string>
-    <string name="custom_timeout_summary_72hours">72 hours</string>
+    <string name="custom_timeout_summary_never">Asla</string>
+    <string name="custom_timeout_summary_5secs">5 saniye</string>
+    <string name="custom_timeout_summary_10secs">10 saniye</string>
+    <string name="custom_timeout_summary_15secs">15 saniye</string>
+    <string name="custom_timeout_summary_30secs">30 saniye</string>
+    <string name="custom_timeout_summary_1min">1 dakika</string>
+    <string name="custom_timeout_summary_2mins">2 dakika</string>
+    <string name="custom_timeout_summary_5mins">5 dakika</string>
+    <string name="custom_timeout_summary_10mins">10 dakika</string>
+    <string name="custom_timeout_summary_20mins">20 dakika</string>
+    <string name="custom_timeout_summary_30mins">30 dakika</string>
+    <string name="custom_timeout_summary_1hour">1 saat</string>
+    <string name="custom_timeout_summary_2hours">2 saat</string>
+    <string name="custom_timeout_summary_4hours">4 saat</string>
+    <string name="custom_timeout_summary_8hours">8 saat</string>
+    <string name="custom_timeout_summary_12hours">12 saat</string>
+    <string name="custom_timeout_summary_24hours">24 saat</string>
+    <string name="custom_timeout_summary_36hours">36 saat</string>
+    <string name="custom_timeout_summary_48hours">48 saat</string>
+    <string name="custom_timeout_summary_72hours">72 saat</string>
     <!-- Default Timeouts -->
-    <string name="custom_timeout_summary_1hour_def">1 hour (Default)</string>
+    <string name="custom_timeout_summary_1hour_def">1 saat (Varsayılan)</string>
     <!-- Cloudflare Block Malware DNS Option -->
     <!-- Cloudflare Block Malware DNS hostname -->
     <!-- Cloudflare Block Malware and Adult Content DNS Option -->
@@ -64,9 +64,9 @@
     <!-- Quad9 Unsecured ECS DNS Option -->
     <!-- Quad9 Unsecured ECS DNS hostname -->
     <!-- Default getTimeSpentInApp string for Wellbeing to display. [CHAR LIMIT=NONE] -->
-    <string name="duration_less_than_one_minute">Less than 1 Minute</string>
+    <string name="duration_less_than_one_minute">1 dakikadan az</string>
     <!-- Summary for Wellbeing screen time usage. [CHAR LIMIT=NONE] -->
-    <string name="screen_time_summary_usage_today">%1$s today</string>
+    <string name="screen_time_summary_usage_today">Bugün %1$s</string>
     <!-- Auto pin confirm -->
     <string name="lock_screen_auto_pin_confirm_summary_custom">Unlock automatically if you input a correct PIN. This is slightly less secure than tapping Enter to confirm.</string>
     <!-- Gesture navbar length -->
