@@ -132,12 +132,12 @@
     <string name="increasing_ring_ramp_up_time_title">Artış süresi</string>
     <!-- Vibration patterns -->
     <string name="vibration_pattern_title">Zil sesi titreşim temposu</string>
-    <string name="pattern_custom">Custom</string>
-    <string name="custom_vibration_pattern_title">Custom pattern</string>
-    <string name="custom_vibration_pattern_summary">Set a custom vibration pattern</string>
+    <string name="pattern_custom">Özel</string>
+    <string name="custom_vibration_pattern_title">Özel ritim</string>
+    <string name="custom_vibration_pattern_summary">Özel bir titreşim ritimi ayarlayın</string>
     <!-- Force LTE_CA -->
-    <string name="force_lte_ca_title">LTE carrier aggregation</string>
-    <string name="force_lte_ca_summary">Enhances LTE bandwidth by aggregating supported bands</string>
+    <string name="force_lte_ca_title">LTE taşıyıcı birleştirme</string>
+    <string name="force_lte_ca_summary">Desteklenen bantları birleştirerek LTE bant genişliğini artırır</string>
     <!-- Force dark mode -->
     <string name="force_dark_title">Dark mode for third-party apps</string>
     <string name="force_dark_summary">Forces darker colors in apps lacking dark mode. Some screens may appear off.</string>
@@ -205,7 +205,7 @@
     <string name="doze_double_tap_title">Telefonu kontrol etmek için iki kez hafifçe vurun</string>
     <string name="doze_double_tap_summary">Çift dokunuşta bildirim efektini oynat</string>
     <!-- Multi Audio Focus -->
-    <string name="multi_audio_focus_title">Multi audio focus</string>
+    <string name="multi_audio_focus_title">Eş zamanlı ses çalma</string>
     <string name="multi_audio_focus_summary">Birden fazla uygulamanın aynı anda ses çalmasına izin ver</string>
     <!-- Hide screen capture status -->
     <string name="hide_screen_capture_status_title">Ekran görüntüsü alındığını gizle</string>
@@ -237,22 +237,22 @@
     <string name="unhide">Göster</string>
     <string name="hide_app">Uygulamayı gizle</string>
     <string name="unhide_app">Uygulamayı göster</string>
-    <string name="unhide_app_desc">If you unhide this app, it will be visible to Android and other apps again.</string>
-    <string name="hide_app_desc">If you hide this app, it will not be visible to Android and other apps, and they may no longer function as intended. Keep in mind, hiding an app preserves it data. By hiding, you turn this app off and hide it on your device.</string>
+    <string name="unhide_app_desc">Eğer uygulamayı görünür yaparsanız, uygulama Android ve diğer uygulamalar için tekrar görünür olacak.</string>
+    <string name="hide_app_desc">Eğer bu uygulamayı gizlerseniz, uygulama Android ve diğer uygulamalar için görünür olmayacak ve beklendiği gibi çalışmayabilir. Bir uygulamayı gizlemenin onun verilerini koruduğunu unutmayın. Gizleyerek bu uygulamayı kapatmış ve cihazınızda saklamış olursunuz.</string>
     <!-- Label for showing hidden apps in list [CHAR LIMIT=40] -->
-    <string name="filter_hidden_apps">Hidden apps</string>
+    <string name="filter_hidden_apps">Gizli uygulamalar</string>
     <!-- Locale Picker -->
-    <string name="clear_search_query_description">Clear query</string>
-    <string name="language_picker_page">Language picker page</string>
-    <string name="search_region">Search regions</string>
-    <string name="search_region_page">Search region page</string>
+    <string name="clear_search_query_description">Sorguyu temizle</string>
+    <string name="language_picker_page">Dil seçimi sayfası</string>
+    <string name="search_region">Bölgeleri ara</string>
+    <string name="search_region_page">Bölge arama sayfası</string>
     <!-- Enforce DNS for VPN -->
-    <string name="vpn_enforce_dns_title">Disable for VPN</string>
-    <string name="vpn_enforce_dns_summary">Disable the private DNS when connected to a VPN\nWill restore upon disconnecting</string>
+    <string name="vpn_enforce_dns_title">VPN için devre dışı bırak</string>
+    <string name="vpn_enforce_dns_summary">VPN\'e bağlıyken özel DNS\'yi devre dışı bırakın\nBağlantı kesildikten sonra geri etkinleşecektir</string>
     <!-- Radio Info -->
-    <string name="radio_info_title">Radio info</string>
+    <string name="radio_info_title">Radyo bilgisi</string>
     <!-- Data Usage Cycle -->
-    <string name="billing_cycle_type_title">Mobile data usage cycle type</string>
+    <string name="billing_cycle_type_title">Mobil veri kullanım döngüsü türü</string>
     <string name="billing_cycle_type_monthly">Monthly</string>
     <string name="billing_cycle_type_weekly">Weekly</string>
     <string name="billing_cycle_type_daily">Daily</string>
