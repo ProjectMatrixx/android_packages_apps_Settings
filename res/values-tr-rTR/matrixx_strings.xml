@@ -139,18 +139,18 @@
     <string name="force_lte_ca_title">LTE taşıyıcı birleştirme</string>
     <string name="force_lte_ca_summary">Desteklenen bantları birleştirerek LTE bant genişliğini artırır</string>
     <!-- Force dark mode -->
-    <string name="force_dark_title">Dark mode for third-party apps</string>
-    <string name="force_dark_summary">Forces darker colors in apps lacking dark mode. Some screens may appear off.</string>
+    <string name="force_dark_title">Üçüncü taraf uygulamalar için karanlık mod</string>
+    <string name="force_dark_summary">Karanlık modu olmayan uygulamalarda daha koyu renkleri zorlar. Bazı ekranlar kapalı görünebilir.</string>
     <!-- Wi-Fi MAC address randomization -->
-    <string name="wifi_per_connection_random_mac_addr">Use per-connection randomized MAC (default)</string>
-    <string name="wifi_per_network_random_mac_addr">Use per-network randomized MAC</string>
-    <string name="wifi_device_mac_addr">Use device MAC</string>
+    <string name="wifi_per_connection_random_mac_addr">Her bağlantı için rastgele MAC kullan (varsayılan)</string>
+    <string name="wifi_per_network_random_mac_addr">Her ağ için rastgele MAC kullan</string>
+    <string name="wifi_device_mac_addr">Cihazın MAC adresini kullan</string>
     <!-- Menu option for not validating the EAP server -->
-    <string name="wifi_do_not_validate_eap_server">Do not validate</string>
+    <string name="wifi_do_not_validate_eap_server">Doğrulama yapma</string>
     <!-- Warning message displayed if user choses not to validate the EAP server -->
-    <string name="wifi_do_not_validate_eap_server_warning">No certificate specified. Your connection will not be private.</string>
+    <string name="wifi_do_not_validate_eap_server_warning">Sertifika belirtilmedi. Bağlantınız gizli olmayacak.</string>
     <!-- HBM -->
-    <string name="auto_hbm_enabled_title">Auto High Brightness Mode</string>
+    <string name="auto_hbm_enabled_title">Otomatik yüksek parlaklık modu</string>
     <string name="auto_hbm_enabled_summary">Automatically enable high brightness mode in strong sunlight. Increases battery usage.</string>
     <string name="auto_hbm_lux_on_title">HBM Activation Threshold</string>
     <string name="auto_hbm_lux_on_summary">Ambient light level at which high brightness mode will turn on</string>
