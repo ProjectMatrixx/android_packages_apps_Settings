@@ -151,10 +151,10 @@
     <string name="wifi_do_not_validate_eap_server_warning">Sertifika belirtilmedi. Bağlantınız gizli olmayacak.</string>
     <!-- HBM -->
     <string name="auto_hbm_enabled_title">Otomatik yüksek parlaklık modu</string>
-    <string name="auto_hbm_enabled_summary">Automatically enable high brightness mode in strong sunlight. Increases battery usage.</string>
-    <string name="auto_hbm_lux_on_title">HBM Activation Threshold</string>
+    <string name="auto_hbm_enabled_summary">Güçlü gün ışığında otomatik olarak yüksek parlaklık modunu etkinleştir. Pil kullanımını arttırır.</string>
+    <string name="auto_hbm_lux_on_title">Yüksek parlaklık modu etkinleştirme eşiği</string>
     <string name="auto_hbm_lux_on_summary">Ambient light level at which high brightness mode will turn on</string>
-    <string name="auto_hbm_lux_off_title">HBM Deactivation Threshold</string>
+    <string name="auto_hbm_lux_off_title">Yüksek parlaklık modu kapanma eşiği</string>
     <string name="auto_hbm_lux_off_summary">Ambient light level below which high brightness mode will turn off</string>
     <!-- Battery Saver -->
     <string name="adaptive_battery_switch_title">Use Adaptive Battery</string>
